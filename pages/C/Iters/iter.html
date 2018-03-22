@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/syntaxH.css" />
+        
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours de C</h1>
+                <h3>Structures it&eacute;ratives</h3>
+                <hr />
+            </div>
+            
+            <article>
+                <h3>Boucle while (TanQue)</h3>
+                
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th>Algorithmique</th>
+                            <th>C</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                TantQue &lt;condition&gt; faire <br />
+                                <span style="margin-left: 25px;">&lt;action&gt;</span><br />
+                                FTQ
+                            </td>
+                            <td>
+                                while (&lt;condition&gt;)<br />
+                                <span style="margin-left: 25px;">&lt;action&gt;;</span>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <p>&#9679; &lt;action&gt; peut &ecirc;tre une action simple ou compos&eacute;e, dans ce dernier cas, ellse sera d&eacute;limit&eacute;e par: {<i>et</i>}.</p>
+                
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th>Algorithmique</th>
+                            <th>C</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                i &larr; 0<br />
+                                s &larr; 0<br />
+                                TantQue i &lt;= 100 faire<br />
+                                <span style="margin-left: 20px;">i &larr; i + 1</span><br />
+                                <span style="margin-left: 20px;">s &larr; s + i</span><br />
+                                FTQ
+                            </td>
+                            <td>
+                                i = 0<br />
+                                s = 0<br />
+                                while (i &lt;= 10)<br />{<br />
+                                <span style="margin-left: 20px;">i = i + 1</span><br />
+                                <span style="margin-left: 20px;">s = s + i</span><br />
+                                }
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </article>
+            
+            <article>
+                <h3>Boucle de...while (Faire...TanQue)</h3>
+                
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th>Algorithmique</th>
+                            <th>C</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                R&eacute;pe&eacute;ter:<br />
+                                <span style="margin-left: 20px;">&lt;Action&gt;</span><br />
+                                Jusqu'&agrave;: &lt;Condition&gt;
+                            </td>
+                            <td>
+                                do<br />
+                                <span style="margin-left: 20px;">&lt;Action&gt;</span><br />
+                                while (non &lt;Condition&gt;)<br />
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+                <fieldset>
+                    <legend><b>Exemple</b>:</legend>
+                    
+                    <center>
+                        <table border="1" class="table">
+                            <tr>
+                                <th>Algorithmique</th>
+                                <th>C</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    i &larr; 0<br />
+                                    R&eacute;pe&eacute;ter:<br />
+                                    <span style="margin-left: 20px;">i &larr; i + 1</span><br />
+                                    Jusqu'&agrave;: i = 10
+                                </td>
+                                <td>
+                                    i = 0<br />
+                                    do<br />
+                                    <span style="margin-left: 20px;">i = i + 1;</span><br />
+                                    while (i != 10)<br />
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                </fieldset>
+            </article>
+            
+            <article>
+                <h3>Boucle for (pour)</h3>
+                
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th>Algorithmique</th>
+                            <th>C</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Pour &lt;var&gt; allant de &lt;val initiale&gt; &agrave; &lt;val finale &gt; faire<br />
+                                <span style="margin-left: 20px;">&lt;Action&gt;</span><br />
+                                FinPour
+                            </td>
+                            <td>
+                                for([&lt;var&gt; = &lt;var initial&gt;]; [&lt;var&gt; &lt;= &lt;val finale&gt;]; [&lt;var&gt; = &lt;var&gt; + &lt;pas-variation&gt;])<br />
+                                <span style="margin-left: 20px;">&lt;Action&gt;</span>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <fieldset>
+                    <legend><b>Exemple</b>:</legend>
+                    
+                    <center>
+                        <table border="1" class="table">
+                            <tr>
+                                <th>Algorithmique</th>
+                                <th>C</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    s &larr; 0
+                                    Pour i allant de 1 &agrave; 10 faire<br />
+                                    <span style="margin-left: 20px;">s &larr; s + i</span><br />
+                                    <span style="margin-left: 20px;">Ecrire("i = ", i, " et s = ", s)</span><br /><br />
+                                    FinPour
+                                </td>
+                                <td>
+                                    s = 0;<br />
+                                    for(i = 1; i &lt;= 10; i = i + 1)<br />{<br />
+                                    <span style="margin-left: 20px;">s = s + i;</span><br />
+                                    <span style="margin-left: 20px;">printf("i = %d et s = %d \n", i, s);</span><br />}
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                </fieldset>
+            </article>
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

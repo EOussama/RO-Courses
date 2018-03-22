@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours d'algorithme</h1>
+                <h3>Les m&eacute;thodes de Tris et de recherche</h3>
+                <hr />
+            </div>
+            
+            <article>
+                <h3>Les algorithmes de Tri</h3>
+
+                <dl>
+                    <dt>&#9679; <b>Tris &eacute;l&eacute;mentaires</b></dt>
+                    <dd>Le tri par s&eacute;lection.</dd>
+                    <dd>Le tri par insertion.</dd>
+                    <dd>Le tri a bulles.</dd><br />
+                    <dt>&#9679; <b>Tris avanc&eacute;s</b></dt>
+                    <dd>Tri rapide.</dd>
+                    <dd>...</dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Tri par s&eacute;lection</h3>
+
+                <p>&#9679; On cherche l'&eacute;l&eacute;ment de plus petite valeur pour l'&eacute;changer avec l'&eacute;l&eacute;ment en premi&egrave;re position; puis on cherche l'&eacute;l&eacute;ment ayant la deux&egrave;me plus petite valeur pour l'&eacute;changer avec l'&eacute;l&eacute;ment en deuxi&egrave;me position; et ainsi de suite.</p>
+                <center><img src="trie_sel_tb.PNG" alt="Tableau de trie par s&eacute;lection" width="300px;"/></center>
+                
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <dl>
+                        <dt>&#9679; Il faut:</dt>
+                        <dd>1 boucle pour parcourir le tableau et s&eacute;lectionner tous les &eacute;l&eacute;ments.</dd>
+                        <dd>1 boucle pour rechercher le minimum parmi les &eacute;l&eacute;ments non tri&eacute;s.</dd>
+                    </dl>
+                </div>
+                
+                <p>&#9679; Supposons que le tableau est not&eacute; T et sa taille N.</p>
+                
+                <div class="sheet">
+                    <label>Trie par s&eacute;lection algorithme</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> sel_sort<br />
+                        <b>Variables</b> indice, i, j, <b>Tableau</b> T[N] : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> N-2 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">indice &larr; i</dd>
+                        <dd style="padding-left: 30px;"><b>Pour</b> j <b>De</b> i+1 <b>A</b> N-1 <b>Faire</b></dd>
+                        <dd style="padding-left: 60px;"><b>Si</b>(T[j] &lt; T[indice]) <b>Alors</b></dd>
+                        <dd style="padding-left: 90px;">indice &larr; j</dd>
+                        <dd style="padding-left: 60px;"><b>FinSi</b></dd>
+                        <dd style="padding-left: 30px;"><b>FinPour</b></dd>
+                        <dd style="padding-left: 30px;">temp &larr; T[indice]</dd>
+                        <dd style="padding-left: 30px;">T[indice] &larr; T[i]</dd>
+                        <dd style="padding-left: 30px;">T[i] &larr; temp</dd>
+                        <dd><b>FinPour</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+            </article>
+            
+            <article>
+                <h3>Tri par insertion</h3>
+
+                <p>&#9679; On consid&egrave;re les &eacute;l&eacute;ments les uns pr&egrave;s en ins&eacute;rant chacun &agrave; sa place parmi les &eacute;l&eacute;ment d&eacute;j&agrave; tri&eacute;s.</p>
+                <center><img src="trie_ins_tb.PNG" alt="Tableau de trie par insertion" width="300px;"/></center>
+                
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <dl>
+                        <dt>&#9679; Il faut:</dt>
+                        <dd>1 boucle pour parcourir le tableau et s&eacute;lectionner tous les &eacute;l&eacute;ments &agrave; ins&eacute;rer.</dd>
+                        <dd>1 boucle pour d&eacute;clarer les &eacute;l&eacute;ments plus grand que l'&eacute;l&eacute;ments &agrave; ins&eacute;rer.</dd>
+                        <dd>ins&eacute;rer l'&eacute;l&eacute;ment.</dd>
+                    </dl>
+                </div>
+                
+                <p>&#9679; Supposons que le tableau est not&eacute; Tab et sa taille N.</p>
+                
+                <div class="sheet">
+                    <label>Trie par insertion algorithme</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> ins_sort<br />
+                        <b>Variables</b> mem, i, j, <b>Tableau</b> T[N] : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Pour</b> i <b>De</b> 1 <b>A</b> N-1 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">mem &larr; T[i]</dd>
+                        <dd style="padding-left: 30px;">j &larr; i</dd>
+                        <dd style="padding-left: 30px;"><b>TantQue</b>  ( j &gt; 0 et T[j-1] &gt; mem ) <b>Faire</b></dd>
+                        <dd style="padding-left: 60px;">T[j] &larr; T[j-1]</dd>
+                        <dd style="padding-left: 60px;">j &larr; j-1</dd>
+                        <dd style="padding-left: 30px;"><b>FTQ</b></dd>
+                        <dd style="padding-left: 30px;">T[j] &larr; mem</dd>
+                        <dd><b>FinPour</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+            </article>
+            
+            <article>
+                <h3>Tri &agrave; bulles</h3>
+                
+                <p>&#9679; On parcours asutant de fois le tableau en permutant 2 &eacute;l&eacute;ments adjacents mal class&eacute;s qu'il le faut pour que le tableau soit tri&eacute;.</p>
+                <center><img src="trie_bulles_tb.PNG" alt="Tableau de trie &agrave; bulles" width="600px;"/></center>
+                
+                 <div class="note">
+                    <h3>Remarque:</h3>
+                    <dl>
+                        <dt>&#9679; Il faut:</dt>
+                        <dd>1 boucle pour parcourir tout le tableau et s&eacute;lectionner les &eacute;l&eacute;ments un &agrave; un.</dd>
+                        <dd>1 boucle pour permuter les &eacute;l&eacute;ments adjacents.</dd>
+                    </dl>
+                </div>
+                
+                <div class="sheet" style="margin-top: 20px;">
+                    <label>Trie &agrave; bulles algorithme</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> bll_sort<br />
+                        <b>Variables</b> temp, i, <b>Tableau</b> T[N] : <b>entier</b><br />
+                        <dd style="padding-left: 30px;">Permut : <b>boolean</b></dd>
+                        <b>D&eacute;but</b><br />
+                        <dd>Permut &larr; Vrai</dd>
+                        <dd><b>TantQue</b> (Permut) <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">Permut &larr; Faux</dd>
+                        <dd style="padding-left: 30px;"><b>Pour</b> i <b>De</b> 1 <b>A</b> N-2 <b>Faire</b></dd>
+                        <dd style="padding-left: 60px;"><b>Si</b> (T[i] &gt; T[i+1]) <b>Alors</b></dd>
+                        <dd style="padding-left: 90px;">temp &larr; T[i]</dd>
+                        <dd style="padding-left: 90px;">T[j] &larr; T[j-1]</dd>
+                        <dd style="padding-left: 90px;">T[i] &larr; T[i+1]</dd>
+                        <dd style="padding-left: 90px;">T[i+1] &larr; temp</dd>
+                        <dd style="padding-left: 60px;"><b>FinSi</b></dd>
+                        <dd style="padding-left: 30px;"><b>FinPour</b></dd>
+                        <dd><b>FTQ</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+            </article>
+            
+            <article>
+                <h3>Tri par comptage</h3>
+                
+                <p>&#9679; Le tri par comptage consiste pour chaque &eacute;l&eacute;ment du tableau a compter combien d'&eacute;l&eacute;ments sont plus petits que lui, gr&acirc;ce a ce chiffre on connait sa position dans le tableau r&eacute;sultat.</p>
+                
+                <dl>
+                    <dt>&#9679; Liste initiale:</dt>
+                    <dd>52 10 1 25 62 3 8 55 4 23</dd>
+                    <dt>&#9679; Poids du mot:</dt>
+                    <dd>7 4 0 6 9 1 3 8 2 5</dd>
+                    <dt>&#9679; Position:</dt>
+                    <dd>8 5 1 7 10 2 4 9 3 6</dd>
+                </dl>
+                
+                <p>&#9679; Ecrire l'algorithme de Tri par comptage Pour r&eacute;aliser ce tri, utilisez plusieurs tableaux.</p>
+                
+                <div class="sheet">
+                    <label>Trie par comptage</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> cmp_sort<br />
+                        <b>Variables</b> i, j, s, <b>Tableau</b> Poids[N], <b>Tableau</b> T[N] : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <i><font style="color: grey; padding-left: 37px;">// Remplissage du tableau Poids par les positions</font></i>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> N-1 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">Poids[i] &larr; 1</dd>
+                        <dd style="padding-left: 30px;"><b>Pour</b> j <b>De</b> 0 <b>A</b> N-1 <b>Faire</b></dd>
+                        <dd style="padding-left: 60px;"><b>Si</b> (T[j] &lt; T[i]) <b>Alors</b></dd>
+                        <dd style="padding-left: 90px;"> Poids[i] &larr; Poids[i] + 1</dd>
+                        <dd style="padding-left: 60px;"><b>FinSi</b></dd>
+                        <dd style="padding-left: 30px;"><b>FinPour</b></dd>
+                        <dd><b>FinPour</b></dd>
+                        <i><font style="color: grey; padding-left: 37px;">// Elimination des positions doubles du tableau Poids</font></i>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> N-1 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;"><b>Pour</b> j <b>De</b> 0 <b>A</b> N-1 <b>Faire</b></dd>
+                        <dd style="padding-left: 60px;"><b>Si</b> ((Poids[i] = Poids[j])  et (i &lt;&gt; j)) <b>Alors</b></dd>
+                        <dd style="padding-left: 90px;"><b>Pour</b> s <b>De</b> 0 <b>A</b> N-1 <b>Faire</b></dd>
+                        <dd style="padding-left: 120px;"><b>Si</b> (Poids[j] &lt; Poids[s]) <b>Alors</b></dd>
+                        <dd style="padding-left: 150px;">Poids[s] &larr; Poids[s] + 1</dd>
+                        <dd style="padding-left: 120px;"><b>FinSi</b></dd>
+                        <dd style="padding-left: 90px;"><b>FinPour</b></dd>
+                        <dd style="padding-left: 90px;">Poids[j] &larr; Poids[j] + 1</dd>
+                        <dd style="padding-left: 60px;"><b>FinSi</b></dd>
+                        <dd style="padding-left: 30px;"><b>FinPour</b></dd>
+                        <dd><b>FinPour</b></dd>
+                        <i><font style="color: grey; padding-left: 37px;">// Tri des &eacute;l&eacute;ments dans le tableau temporaire X</font></i>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> N-1 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">X[Poids[i]] &larr; T[i]</dd>
+                        <dd><b>FinPour</b></dd>
+                        <i><font style="color: grey; padding-left: 37px;">// Copie des &eacute;l&eacute;ments tri&eacute;s dans T</font></i>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> N-1 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">T[i] &larr; X[i]</dd>
+                        <dd><b>FinPour</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+            </article>
+            
+            <article>
+                <h3>Les m&eacute;thodes de Recherche Rapide</h3>
+                
+                <h4>Recherche s&eacute;quentielle</h4>
+                <p>&#9679; Le principe de l'algorithme de recherche s&eacute;quentielle consiste &agrave; parcourir un tableau d'&eacute;l&eacute;ments dans l'ordre de ses indices jusqu'&agrave; ce qu'un &eacute;l&eacute;ment recherch&eacute; soit trouv&eacute; ou bien que la fin du tableau soit atteinte et le rang (indice) de l'&eacute;l&eacute;ment est alors retourn&eacute;.</p>
+                
+                <h4>Recherche dichotomique</h4>
+                <p>&#9679; L'algorithme de recherche dichotomique est un algorithme efficace et rapide pour la recherche d'un &eacute;l&eacute;ment dans un tableau <b><u>tri&eacute;</u></b>. Le principe de cet algorithme consiste &agrave; diviser le tableau en deux parties et &agrave; comparer la valeur recherch&eacute;e avec l'&eacute;l&eacute;ment situ&eacute; au milieu du tableau (l'&eacute;l&eacute;ment m&eacute;dian).<br /><br />
+                Si la valeur recherch&eacute;e correspond &agrave; l'&eacute;l&eacute;ment m&eacute;dian, alors l'algorithme s'arr&ecirc;te et renvoie l'indice de cet &eacute;l&eacute;ment. Sinon l'algorithme va r&eacute;p&eacute;ter la recherche uniquement dans la partie qui peut contenir la valeur recherch&eacute;e.</p>
+            </article>
+
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

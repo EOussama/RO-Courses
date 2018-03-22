@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/syntaxH.css" />
+        
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours de C</h1>
+                <h3>Structures alternatives</h3>
+                <hr />
+            </div>
+            
+            <article>
+                <h3>Sch&eacute;ma if ... else</h3>
+                
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th>Algorithmique</th>
+                            <th>C</th>
+                        </tr>
+                        <tr>
+                            <td>Si &lt;Condition&gt; Alors <br /> <span style="margin-left: 20px;">&lt;action1&gt;;</span><br /> Sinon <br /> <span style="margin-left: 20px;">&lt;action2&gt;;</span> <br /> FinSi</td>
+                            <td>if (&lt;Condition&gt;) <br /> <span style="margin-left: 20px;">&lt;action1&gt;;</span> <br /> else <br /> <span style="margin-left: 20px;">&lt;action2&gt;;</span></td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th>Algorithmique</th>
+                            <th>C</th>
+                        </tr>
+                        <tr>
+                            <td>Si taxe &lt; 1000 Alors <br /> <span style="margin-left: 20px;">taux &larr; 0;</span><br /> Sinon <br /> <span style="margin-left: 20px;">
+                                Si taxe &lt; 2000 Alors</span> <br /> <span style="margin-left: 50px;">taux &larr; 1</span> <br /> <span style="margin-left: 20px;">Sinon</span> <br /> <span style="margin-left: 50px;">taux &larr; 2</span> <br /> <span style="margin-left: 20px;">FinSi </span>
+                                 <br /> FinSi</td>
+                            <td>if (taxe &lt; 1000) <br /> <span style="margin-left: 20px;">taux = 0;</span> <br /> else if (taxe &lt; 2000)<br /> <span style="margin-left: 20px;">taux = 1;</span> <br />else <br /><span style="margin-left: 20px;"> taux = 2; </span></td>
+                        </tr>
+                    </table>
+                </center>
+            </article>
+            
+            <article>
+                <h3>Sch&eacute;ma Case</h3>
+                
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th>C</th>
+                        </tr>
+                        <tr>
+                            <td>switch (&lt;variables&gt; {<br />
+                                <span style="margin-left: 20px;">case &lt;Valeur1&gt;: &lt;action1&gt;; break;</span><br />
+                                <span style="margin-left: 20px;">case &lt;Valeur2&gt;: &lt;action2&gt;; break;</span><br />
+                                <span style="margin-left: 20px;">...</span>
+                                <br />
+                                <span style="margin-left: 20px;">case &lt;Valeurn&gt;: &lt;actionn&gt;; break;</span><br />
+                                <span style="margin-left: 20px;">default: &lt;action&gt;; break;</span>
+                            <br />}</td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <div class="sheet">
+                    <label>Exemple de programme</label>
+                    <span>
+                        <br />
+                        <span class="clang-include">#include &lt;stdio.h&gt;</span><br /><br />
+                        <span class="clang-keyword">void</span> main()<br />
+                        {
+                        <dd><span class="clang-keyword">int</span> j;</dd>
+                        <dd><span class="clang-function">printf</span>(<span class="clang-string">"Donner un numero etre 1 et 7: "</span>);</dd>
+                        <dd><span class="clang-function">scanf</span>(<span class="clang-string">"%d"</span>, &amp;j);</dd>
+                        <br /><dd><span class="clang-keyword">switch</span>(j)</dd><dd>{</dd>
+                        <dd style="margin-left: 75px;"><span class="clang-keyword">case</span> 1: { <span class="clang-function">printf</span>(<span class="clang-string">"Lundi \n"</span>); break; }</dd>
+                        <dd style="margin-left: 75px;"><span class="clang-keyword">case</span> 2: { <span class="clang-function">printf</span>(<span class="clang-string">"Mardi \n"</span>); break; }</dd>
+                        <dd style="margin-left: 75px;"><span class="clang-keyword">case</span> 3: { <span class="clang-function">printf</span>(<span class="clang-string">"Mercredi \n"</span>); break; }</dd>
+                        <dd style="margin-left: 75px;"><span class="clang-keyword">case</span> 4: { <span class="clang-function">printf</span>(<span class="clang-string">"Jeudi \n"</span>); break; }</dd>
+                        <dd style="margin-left: 75px;"><span class="clang-keyword">case</span> 5: { <span class="clang-function">printf</span>(<span class="clang-string">"Vendredi \n"</span>); break; }</dd>
+                        <dd style="margin-left: 75px;"><span class="clang-keyword">case</span> 6: { <span class="clang-function">printf</span>(<span class="clang-string">"Samedi \n"</span>); break; }</dd>
+                        <dd style="margin-left: 75px;"><span class="clang-keyword">case</span> 7: { <span class="clang-function">printf</span>(<span class="clang-string">"Dimanche \n"</span>); break; }</dd>
+                        <dd style="margin-left: 75px;"><span class="clang-keyword">default</span>: { <span class="clang-function">printf</span>(<span class="clang-string">"Incorrect \n"</span>); break; }</dd>
+                        <dd>}</dd>
+                        }
+                    </span>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

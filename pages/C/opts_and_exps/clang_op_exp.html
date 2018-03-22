@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/syntaxH.css" />
+        
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours de C</h1>
+                <h3>Op&eacute;rateurs et Expressions</h3>
+                <hr />
+            </div>
+            
+            <article>
+                <h3>Expressions</h3>
+                
+                <dl>
+                    <dt>&#9679; Une expression est form&eacute;e &agrave; partir:</dt>
+                    <dd>D'op&eacute;randes</dd>
+                    <dd>D'op&eacute;rateurs</dd><br />
+                    <dt>&#9679; Une expression intervient dans:</dt>
+                    <dd>Les instructions D'affectation</dd>
+                    <dd>D'affichage</dd><br />
+                    <dt>&#9679; Une expression peut &ecirc;tre:</dt>
+                    <dd>Une constante</dd>
+                    <dd>Une variable</dd>
+                    <dd>Un appel de fonction</dd>
+                    <dd>Une expression arithm&eacute;tique, logique ou cha&icirc;ne</dd>
+                    <dd>D'op&eacute;rateurs</dd>
+                    <dt>&#9679; Une expression poss&egrave;de une valeur et un type Les variables dans une expression peuvent &ecirc;tre:</dt>
+                    <dd>Simples (entiers, r&eacute;els, caract&egrave;res, pointeurs)</dd>
+                    <dd>Structur&eacute;es (tableaux, structures, unions)</dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Op&eacute;rateurs arithm&eacute;tiues</h3>
+                <center>
+                    <table border="1" class="table">
+                        <tr><td>+</td></tr>
+                        <tr><td>-</td></tr>
+                        <tr><td>*</td></tr>
+                        <tr><td>/</td></tr>
+                        <tr><td>/ (si les 2 op&eacute;randes sont des entiers)</td></tr>
+                        <tr><td>% (reste de division enti&egrave;re)</td></tr>
+                    </table>
+                </center>
+                
+                <fieldset>
+                    <legend><b>Exemple</b>:</legend>
+                    <span>x = 9 % 4 // x = 1</span>
+                </fieldset>
+            </article>
+            
+            <article>
+                <h3>Op&eacute;rateurs relationnels</h3>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px; width: 150px;">Algorithmique</th>
+                            <th style="padding: 10px; width: 150px;">C</th>
+                        </tr>
+                        <tr>
+                            <td>&lt;</td>
+                            <td>&lt;</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;=</td>
+                            <td>&lt;=</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;</td>
+                            <td>&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;=</td>
+                            <td>&gt;=</td>
+                        </tr>
+                        <tr>
+                            <td>=</td>
+                            <td>==</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;&gt;</td>
+                            <td>!=</td>
+                        </tr>
+                    </table>
+                </center>
+            </article>
+            
+            <article>
+                <h3>Exemples de fonctions (math.h)</h3>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px; width: 150px;">Algorithmique</th>
+                            <th style="padding: 10px; width: 150px;">C</th>
+                        </tr>
+                        <tr>
+                            <td>| x |</td>
+                            <td>abs(x)</td>
+                        </tr>
+                        <tr>
+                            <td>x * x</td>
+                            <td>pow(x, 2)</td>
+                        </tr>
+                        <tr>
+                            <td><span style="white-space: nowrap;">&radic;<span style="text-decoration: overline;">x</span></span></td>
+                            <td>sqrt(x)</td>
+                        </tr>
+                        <tr>
+                            <td>Sin(x)</td>
+                            <td>sin(x)</td>
+                        </tr>
+                        <tr>
+                            <td>Cos(x)</td>
+                            <td>sos(x)</td>
+                        </tr>
+                    </table>
+                </center>
+            </article>
+            
+            <article>
+                <h3>Op&eacute;rateurs Bool&eacute;ens</h3>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px; width: 150px;">Algorithmique</th>
+                            <th style="padding: 10px; width: 150px;">C</th>
+                        </tr>
+                        <tr>
+                            <td>et</td>
+                            <td>&amp;&amp;</td>
+                        </tr>
+                        <tr>
+                            <td>ou</td>
+                            <td>||</td>
+                        </tr>
+                        <tr>
+                            <td>non</td>
+                            <td>!</td>
+                        </tr>
+                        <tr>
+                            <td>xou</td>
+                            <td>non d&eacute;fini</td>
+                        </tr>
+                    </table>
+                </center>
+            </article>
+            
+             <article>
+                <h3>Op&eacute;rateurs Sp&eacute;cifiques</h3>
+                
+                <h4>Les affectations simples</h4>
+                <p>&#9679; Une affectation simple s"&eacute;crit:</p>
+                <div style="background-color: cornflowerblue; color: azure; padding: 10px; width: 40%; text-align: center; margin: auto; border: 2px solid grey; font-size: 100%;">&lt;variable&gt; = &lt;expression&gt;;</div>
+                 
+                <dl>
+                    <dt>&#9679; L'op&eacute;rateur ++ (incr&eacute;ment)</dt>
+                    <dd>L'op&eacute;ration d'incr&eacute;mentation <i>i = i+1</i> peut &ecirc;tre r&eacute;alis&eacute;e par un op&eacute;rateur unaire <b>++i</b> ou <b>i++</b></dd><br />
+                    <dt>&#9679; L'op&eacute;rateur -- (d&eacute;cr&eacute;ment)</dt>
+                    <dd>L'op&eacute;ration de d&eacute;cr&eacute;mentation <i>i = i-1</i> peut &ecirc;tre r&eacute;alis&eacute;e par un op&eacute;rateur unaire <b>--i</b> ou <b>i--</b></dd>
+                </dl>
+                 
+                <p>&#9679; Tableau descriptif des ope&eacute;rateurs ++ et --</p>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px; min-width: 150px;">Op&eacute;rateur</th>
+                            <th style="padding: 10px; min-width: 100px;">Notation</th>
+                            <th style="padding: 10px; min-width: 100px;">Notation &eacute;quivalente</th>
+                            <th style="padding: 10px; min-width: 100px;">Signification</th>
+                            <th style="padding: 10px; min-width: 100px;">Exemple</th>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: center;" rowspan="2">++</td>
+                            <td  style="text-align: center;">++i (pr&eacute;fix&eacute;)</td>
+                            <td  style="text-align: center;">i = i + 1</td>
+                            <td style="text-align: center;">n = ++i<br />&lArr;&rArr;<br />i = i + 1<br />puis n = i</td>
+                            <td style="text-align: center;">i = 2;<br />n= ++i - 2;<br />&rArr;<br />i = 3<br />et<br />n = 1</td>
+                        </tr>
+                        <tr>
+                            <td  style="text-align: center;">i++ (postfix&eacute;)</td>
+                            <td  style="text-align: center;">i = i + 1</td>
+                            <td style="text-align: center;">n = i++<br />&lArr;&rArr;<br />n = i<br />puis i = i + 1</td>
+                            <td style="text-align: center;">i = 2;<br />n= i++ - 2;<br />&rArr;<br />n = 0<br />et<br />i = 3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;" rowspan="2">--</td>
+                            <td  style="text-align: center;">--i (pr&eacute;fix&eacute;)</td>
+                            <td  style="text-align: center;">i = i - 1</td>
+                            <td style="text-align: center;">n = -i<br />&lArr;&rArr;<br />i = i - 1<br />puis n = i</td>
+                            <td style="text-align: center;">i = 2;<br />n= --i - 2;<br />&rArr;<br />i = 1<br />et<br />n = -1</td>
+                        </tr>
+                        <tr>
+                            <td  style="text-align: center;">i-- (postfix&eacute;)</td>
+                            <td  style="text-align: center;">i = i - 1</td>
+                            <td style="text-align: center;">n = i--<br />&lArr;&rArr;<br />n = i<br />puis i = i - 1</td>
+                            <td style="text-align: center;">i = 2;<br />n= i-- - 2;<br />&rArr;<br />n = 0<br />et<br />i = 1</td>
+                        </tr>
+                        
+                    </table>
+                </center>
+                 
+                <dl>
+                    <dt>&#9679; Les op&eacute;rateurs d'affectation &eacute;largie</dt> 
+                    <dd>Une affectation peut &ecirc;tre "&eacute;largie".</dd>
+                    <dd>Ex:  = n + 1</dd>
+                    <dd>En utilisant des op&eacute;rateurs unaires comme n += i</dd>
+                </dl>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px; min-width: 150px;">Op&eacute;rateur</th>
+                            <th style="padding: 10px; min-width: 100px;">Notation</th>
+                            <th style="padding: 10px; min-width: 100px;">Notation &eacute;quivalente</th>
+                        </tr>
+
+                        <tr>
+                            <td>+=</td>
+                            <td>n += i</td>
+                            <td>n = n + i</td>
+                        </tr>
+                         <tr>
+                            <td>*=</td>
+                            <td>n *= i</td>
+                            <td>n = n * i</td>
+                        </tr>
+                         <tr>
+                            <td>/=</td>
+                            <td>n /= i</td>
+                            <td>n = n / i</td>
+                        </tr>
+                         <tr>
+                            <td>%=</td>
+                            <td>n %= i</td>
+                            <td>n = n % i</td>
+                        </tr>
+                         <tr>
+                            <td>&lt;&lt;=</td>
+                            <td>n &lt;&lt;= i</td>
+                            <td>n = n &lt;&lt; i</td>
+                        </tr>
+                         <tr>
+                            <td>&gt;&gt;=</td>
+                            <td>n &gt;&gt;= i</td>
+                            <td>n = n &gt;&gt; i</td>
+                        </tr>
+                         <tr>
+                            <td>&amp;=</td>
+                            <td>n &amp;= i</td>
+                            <td>n = n &amp; i</td>
+                        </tr>
+                         <tr>
+                            <td>!=</td>
+                            <td>n != i</td>
+                            <td>n = n ! i</td>
+                        </tr>
+                         <tr>
+                            <td>&#94;=</td>
+                            <td>n &#94;= i</td>
+                            <td>n = n &#94; i</td>
+                        </tr>
+                        
+                    </table>
+                </center>
+                 
+                 <dl>
+                    <dt>&#9679; L'op&eacute;rateur conditionnel "?"</dt> 
+                    <dd>Une condition peut &ecirc;tre trait&eacute;e dans une affectation comme suit:</dd>
+                </dl>
+                 
+                 <div style="background-color: cornflowerblue; color: azure; padding: 10px; width: 80%; text-align: center; margin: auto; border: 2px solid grey; font-size: 100%;">&lt;variable&gt; = &lt;condition&gt; ? &lt;expression1&gt; : &lt;expression2&gt;;</div>
+                 
+                 <dl>
+                    <dt>&#9679; Equivalent &agrave;:</dt>
+                    <dd><b>Si</b> &lt;condition&gt; <b>Alors</b></dd>
+                    <dd style="margin-left: 70px;">&lt;variable&gt; &larr; &lt;expression1&gt;</dd>
+                    <dd><b>Sino</b>n</dd>
+                    <dd style="margin-left: 70px;">&lt;variable&gt; &larr; &lt;expression2&gt;</dd>
+                    <dd><b>FinSi</b></dd>
+                 </dl>
+            </article>
+            
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

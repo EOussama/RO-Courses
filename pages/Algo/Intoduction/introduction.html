@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours d'algorithme</h1>
+                <h3>Introduction</h3>
+                <hr />
+            </div>
+                
+            <article>
+                <h3>Algorithme</h3>
+                <p>&#9679; En informatique, un algorithme est une suite d'instructions permettant d'arriver &agrave; un r&eacute;sultat donn&eacute;.</p>
+                <p>&#9679; Un algorithme est &eacute;crit dans un langage humain (simple).</p>
+            </article>
+            
+            <article>
+                <h3>Structure g&eacute;n&eacute;rale d'un algorithme</h3>
+                <img src="algo_structure.PNG" alt="Image de sructure d'algorithme" />
+            </article>
+            
+            <article>
+                <h3>Notion de variable</h3>
+                <p>&#9679; Les donn&eacute;es ainsi que les r&eacute;sultats des calculs interm&eacute;diaires ou finaux, sont rang&eacute;s dans des <b>cases-m&eacute;moires</b> appel&eacute;es <b>variables</b>.</p>
+                
+                <p>&#9679; Une variable:</p>
+                    <ul>
+                        <li>Un emplacement m&eacute;moire nomm&eacute;.</li>
+                        <li>Prenant un nombre ind&eacute;fini de valeurs diff&eacute;rentes au cours du d&eacute;roulement de l'algorithme.</li>
+                    </ul>
+            </article>
+            
+            <article>
+                <h3>D&eacute;claration des variables</h3>
+                <p>&#9679; La partie d&eacute;clarations consiste &agrave; &eacute;num&eacute;rer toutes les variables dont on aura besoin au cours de l'algorithme.</p>
+                <dl>
+                    <dt><b>&#9679; Syntaxe</b>:</dt>
+                    <dd><i>Variable nom_de_la_variable : type</i></dd>
+                    <dt><b>&#9679; Exemple</b>:</dt>
+                    <dd><i>variables nombre, k : entier<br />nom : chaine<br />a, b : bool&eacute;en</i></dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Types des variables</h3>
+                 <dl>
+                    <dt><b>&#9679; Entier</b>:</dt>
+                    <dd><i>les nombres entiers positifs ou n&eacute;gatifs</i></dd>
+                    <dt><b>&#9679; R&eacute;el</b>:</dt>
+                    <dd><i>les nombres r&eacute;els</i></dd>
+                    <dt><b>&#9679; Caract&egrave;re</b>:</dt>
+                    <dd><i>caract&egrave;res alphab&eacute;tiques et num&eacute;rique</i></dd>
+                    <dt><b>&#9679; Chaine</b>:</dt>
+                    <dd><i>une chaine de caract&egrave;re</i></dd>
+                    <dt><b>&#9679; Bool&eacute;en</b>:</dt>
+                    <dd><i>les expressions logiques (Vrai, Faux)</i></dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Les constantes</h3>
+                <p>&#9679; Comme une variable, une constante est un emplacement m&eacute;moire, mais dont la valeur stock&eacute;e ne sera jamais modifi&eacute;e au cours du programme.</p>
+                <dl>
+                    <dt><b>&#9679; Syntaxe</b>:</dt>
+                    <dd><i>Constante nom_de_la_constante = valeur</i></dd>
+                    <dt><b>&#9679; Exemple</b>:</dt>
+                    <dd><i>Constante pi = 3.14</i></dd>
+                </dl>
+            </article>
+            
+             <article>
+                <h3>Les instructions</h3>
+                <p>&#9679; Une instruction est une action que l'ordinateur est capable d'ex&eacute;cuter.</p>
+                <p>&#9679; Chaque langage de programmation fournit une liste des instructions qu'on peut utiliser.</p>
+                <p>&#9679; <b>Les instructions de base sont</b>:</p>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <dt><b>&#9679; L'instruction d'affectation</b>:</dt>
+                        <dd><i>L'affectation permet d'affecter une valeur &agrave; une variable.</i></dd>
+                        <dd><i>Symbolis&eacute;e en algorithmique par <b>une flesh</b>, elle pr&eacute;cise le sens de l'affectation.</i></dd>
+                        <dt><b>&#9679; Syntaxe</b>:</dt>
+                        <dd><b>Variable &larr; expression</b></dd>
+                        <dt><b>&#9679; Expression peut &ecirc;tre soit</b>:</dt>
+                        <dd><i>Constante.</i></dd>
+                        <dd><i>Identificateur (nom d'une variable).</i></dd>
+                        <dd><i>Expression arithm&eacute;tique.</i></dd>
+                        <dd><i>Expression logique.</i></dd>
+                    </li>
+                </ul>
+                <dl>
+                </dl>
+                <center>
+                     <p><b>Les op&eacute;rateurs arithm&eacute;tiques et relationnels</b></p>
+                     <img src="rela.PNG" alt="Algo table" />
+                </center>
+                <div class="sheet">
+                    <label>Calculation Algorithme</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Calcul<br />
+                        <b>Variables</b> A, B, C, D : entier<br />
+                        <b>D&eacute;but</b><br />
+                        <dd>A &larr; 10</dd>
+                        <dd>B &larr; 30</dd>
+                        <dd>C &larr; A+B</dd>
+                        <dd>D &larr; C*A</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                 
+                <p>&#9679; L'instruction de sortie: L'instruction de sortie (d'&eacute;criture) permet d'afficher des informations &agrave; l'utilisateur &agrave; travers l'&eacute;cran.</p>
+                <dl>
+                    <dt><b>&#9679; Syntaxe</b>:</dt>
+                    <dd><b>Ecrire (expression)</b></dd>
+                    <dd><i>Expression peut &ecirc;tre un message, le contenu d'une variable...</i></dd>
+                </dl>
+                 
+                <div class="sheet">
+                    <label>Affichage Algorithme</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Affichage<br />
+                        <b>Variables</b> A : entier<br />
+                        <b>D&eacute;but</b><br />
+                        <dd>A &larr; 10</dd><br />
+                        <dd style="color: grey; font-size: 12px;">Cette instruction permettra d'afficher <u>bonjour</u> &agrave; l'&eacute;cran.</dd>
+                        <dd><b>Ecrire</b>("bonjour")</dd><br />
+                        <dd style="color: grey; font-size: 12px;">Cette instruction permet d'afficher &agrave; l'&eacute;cran la valeur de la variable A.</dd>
+                        <dd><b>Ecrire</b>(A)</dd><br />
+                        <dd style="color: grey; font-size: 12px;">ou bien</dd>
+                        <dd><b>Ecrire</b>("la valeur de A est: " , A)</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+
+                <p>&#9679; <b>L'instruction d'entr&eacute;e</b>:</p>
+                <ul style="list-style-type: none;">
+                    <li>&#9679; L'instruction d'entr&eacute;e ou de lecture permet &aacute; l'utilisateur de saisir des donn&eacute;es au clavier.</li>
+                    <li>&#9679; Cette instruction assigne (affecte) une valeur entr&eacute;e au clavier dans une variable.</li>
+                    <li><b>&#9679; Syntaxe: Lire (variable)</b></li>
+                </ul>
+                 
+                 <div class="sheet">
+                    <label>Input Algorithme</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Input<br />
+                        <b>Variables</b> A : entier<br />
+                        <b>D&eacute;but</b><br />
+                        <dd style="color: grey; font-size: 12px;">Cette instruction permet &agrave; l'utilisateur de saisir une valeur au clavier qui sera affect&eacute;e &agrave; la variable A.</dd>
+                        <dd><b>Lire</b>(A)</dd><br />
+                        <b>Fin</b>
+                    </span>
+                </div>
+                
+                 <div class="note">
+                    <h3>Remarque:</h3>
+                    <p>Lorsque le programme rencontre cette instruction, l'ex&eacute;cution s'interrompt et attend que l'utilisateur tape une valeur. Cette valeur est rang&eacute;e en m&eacute;moire dans la variable d&eacute;sign&eacute;e.</p>
+                 </div>
+
+            </article>
+            
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

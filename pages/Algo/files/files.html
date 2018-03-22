@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours d'algorithme</h1>
+                <h3>La manipulation des fichiers</h3>
+                <hr />
+            </div>
+            
+            <article>
+                <h3>Ouverture</h3>
+
+                <dl>
+                    <dt>&#9679; Lors de l'ouverture du fichier il faut pr&eacute;ciser pour quelle op&eacute;ration celui-ci sera utilis&eacute;, Entr&eacute;e, Sortie ou Ajout. On indiquera aussi par un n<sup>o</sup> le buffer qui sera la repr&eacute;sentation du fichier en m&eacute;moire:</dt>
+                    <dd><b>OUVRIR</b> nomdufichier <b>POUR</b> operation <b>COMME</b> NumBuffer</dd>
+                </dl>
+                
+                <dl>
+                    <dt>&#9679; Nomdufichier:</dt>
+                    <dd><i>nom physique complet du fichier, exemple c:\monfichier.txt</i></dd>
+                    <dt>&#9679; Operation:</dt>
+                    <dd><i>ENTREE, SORTIE ou AJOUT (INPUT, OUTPUT ou APPEND)</i></dd>
+                    <dt>&#9679; NumBuffer:</dt>
+                    <dd><i>un num&eacute;ro de 1 &agrave; 255 pr&eacute;c&eacute;d&eacute; du caract&egrave;re #</i></dd>
+                </dl> 
+
+            </article>
+            
+            <article>
+                <h3>Tester sur l'existence du fichier</h3>
+
+                <p>&#9679; lors d'une ouverture pour lecture ou ajout, il faut s'assurer de l'existence pr&eacute;alable du fichier.</p>
+                <p>&#9679; la fonction qui nous permet d'obtenir la certitude de l'existence ou non d'un fichier &agrave; un emplacement donn&eacute; sur le disque est une fonction bool&eacute;enne qui renverra vrai si le fichier existe ou faux sinon.</p>
+                
+                <div class="sheet" style="margin-top: 10px;">
+                    <label>Tester sur l'existence du fichier</label>
+                    <span>
+                       <br />
+                        <b>Algorithme</b> exists_proc<br />
+                        <b>D&eacute;but</b>
+                        <dd><b>Si</b> (<b>EXISTEFIC</b>("c:\liste.txt") = VRAI) <b>Alors</b></dd>
+                        <dd style="padding-left: 30px;"><b>OUVRIR</b>("c:\liste.txt") <b>POUR LECTURE COMME #1</b></dd>
+                        <dd><b>Sinon</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>("Le fichier demand&eacute; n'existe pas")</dd>
+                        <dd><b>FinSi</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+
+            </article>
+            
+            <article>
+                <h3>Op&eacute;rations sur les donn&eacute;es</h3>
+                
+                <dl>
+                    <dt>&#9679; Deux op&eacute;rations tr&egrave;s simples; la lecture depuis le buffer et l'&eacute;criture dans le buffer:</dt>
+                    <dd><b>MaVariable</b> &larr; <b>LIREFIC</b> NumBuffer</dd>
+                    <dd><b>ECRIREFIC MaVariable</b> NumBuffer </dd>
+                </dl>
+
+            </article>
+            
+            <article>
+                <h3>D&eacute;tection de fin de fichier</h3>
+                
+                <p>&#9679; Une variable syst&egrave;me permet de d&eacute;finir que le programme a atteint la fin du fichier et qu'il n'y a plus d'&eacute;l&eacute;ments à lire.</p>
+                <p>&#9679; Cette variable sera nomm&eacute;e par un mot cl&eacute; r&eacute;serv&eacute; EOF pour End Of File assign&eacute;e par buffer.</p>
+                <p>&#9679; <b>EOF</b> NumBuffer.</p>
+                
+                <div class="sheet" style="margin-top: 10px;">
+                    <label>D&eacute;tection de fin de fichier</label>
+                    <span>
+                       <br />
+                        <b>Algorithme</b> eof_alg<br />
+                        <b>Variables</b> VARTAMP : <b>r&eacute;el</b><br />
+                        <b>D&eacute;but</b>
+                        <dd><b>OUVRIR</b>("c:\liste.txt") <b>POUR LECTURE COMME #1</b></dd>
+                        <dd style="padding-left: 30px;"><b>TanQue</b> (<b>NON</b>(<b>EOF</b> #1)) <b>Faire</b></dd>
+                        <dd style="padding-left: 60px;">VARTAMP &larr; LIREFIC #1</dd>
+                        <dd style="padding-left: 60px;"><b>Ecrire</b>(VARTAMP)</dd>
+                        <dd style="padding-left: 30px;"><b>FTQ</b></dd>
+                        <dd><b>FinSi</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+
+            </article>
+            
+            <article>
+                <h3>Fermeture</h3>
+                
+                <p>&#9679; Pour terminer le traitement d'un fichier, il faudra lib&eacute;rer celui-ci pour qu'il puisse &ecirc;tre de nouveau utiliser par un autre programme.</p>
+                <p>&#9679; Attention, l'op&eacute;ration de fermeture provoque le transfert des donn&eacute;es de la zone tampon, buffer, sur le disque dans le cas d'un fichier ouvert pour sortie ou ajout. Si vous oubliez de fermer le fichier, les donn&eacute;es de celui-ci ne seront pas sauvegard&eacute;es.</p>
+                <p>&#9679; <b>FERMERFIC</b> NumBuffer.</p>
+                
+            </article>
+
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

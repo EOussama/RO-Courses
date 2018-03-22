@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/syntaxH.css" />
+        
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours de C</h1>
+                <h3>Concepts de Base</h3>
+                <hr />
+            </div>
+            
+            <article>
+                <h3>Notion d'environnement (D&eacute;clarations)</h3>
+                
+                <dl>
+                    <dt>&#9679; <b>Environnement : ensemble d'objets n&eacute;cessaires &agrave; la r&eacute;solution d'un probl&egrave;me (d&eacute;claration des objets)</b></dt>
+                    <dd>Ex. mod&eacute;le Surface-Disque</dd>
+                    <dd style="margin-left: 60px; color: grey;">Param&egrave;tre: R, S</dd>
+                    <dd style="margin-left: 60px; color: grey;">Relation: S = pR<sub>2</sub></dd>
+                    <dd style="margin-left: 60px; color: grey;">Environnement: R, S</dd>
+                    <br />
+                    <dt>&#9679; <b>En conclusion</b></dt>
+                    <dd>Pour programmer un probl&egrave;me sur ordinateur:</dd>
+                    <dd style="margin-left: 60px;">Il faut commencer par d&eacute;finir son environnement (d&eacute;clarer ses objets)</dd>
+                    <br />
+                    <dt>&#9679; <b>Deux sortes d'objets de base</b>:</dt>
+                    <dd>Variables</dd>
+                    <dd>Constantes</dd>
+                    <br />
+                    <dt>&#9679; <b>Ex. Calcul de S &agrave; partir de la formule: PI * R * R</b></dt>
+                    <dd>Variables: R, S</dd>
+                    <dd>Constante: PI (3.14)</dd>
+                    <br />
+                    <dt>&#9679; <b>Repr&eacute;sentation physique en m&eacute;moire</b>:</dt>
+                    <dd>Variable</dd>
+                    <dd style="margin-left: 60px;"><u>nom ou identificateur</u> (pour r&eacute;f&eacute;rencer la variable en m&eacute;moire).</dd>
+                    <dd style="margin-left: 60px;"><u>Type</u> (pour d&eacute;finir sa forme ou sa taille en MC).</dd>
+                    <dd style="margin-left: 60px;"><u>Valeur</u> (pour d&eacute;finir sa situation &agrave; un moment donn&eacute;) Le nom et le type sont fixes, La valeur est variable.</dd>
+                    <dd>Constante</dd>
+                    <dd style="margin-left: 60px;"><u>Type</u>.</dd>
+                    <dd style="margin-left: 60px;"><u>Nom</u>.</dd>
+                    <dd style="margin-left: 60px;"><u>Valeur</u>.</dd>
+                    <dd style="margin-left: 60px;">Le nom, le type et la valeur sont fixes.</dd>
+                    <br />
+                    <dt>&#9679; <b>Les types d'objets</b>:</dt>
+                    <dd>Num&eacute;rique entier (int)</dd>
+                    <dd>r&eacute;el (float)</dd>
+                    <dd>Caract&egrave;re ou chaîne de caract&egrave;res (char)</dd>
+                    <dd>double pr&eacute;cision (double)</dd>
+                    <dd>Logique (ou bool&eacute;en) (bool)</dd>
+                    <dd>Pointeur (*)</dd>
+                    <br />
+                    <dt><b>&#9679; D&eacute;claration des variables</b></dt>
+                    <dd>En C, les variables sont d&eacute;clar&eacute;es au d&eacute;but d'un loc</dd>
+                    <dd>Un bloc est limit&eacute; par { et }</dd>
+                    <dd>Un bloc est compos&eacute; &eacute;ventuellement de d&eacute;clarations et/ou d'instructions.</dd><br />
+                    <span style="font-weight: bold; margin-left: 40%;">int a, b;</span><br />
+                    <span style="font-weight: bold; margin-left: 40%;">int c = 0;</span><br />
+                    <span style="font-weight: bold; margin-left: 40%;">float x, y, z;</span><br />
+                    <span style="font-weight: bold; margin-left: 40%;">char m;</span><br />
+                    <span style="font-weight: bold; margin-left: 40%;">bool n;</span><br />
+                    <dt><b>&#9679; D&eacute;claration des Constantes</b></dt>
+                    <dd>D&eacute;clarer la constante dans la section "const"</dd>
+                    <dd>Utiliser la directive #define qui permet de  emplacer constamment un symbole par la chaîne de caract&egrave;res qui d&eacute;finit sa valeur</dd>
+                    <dt>&#9679; Rq. On peut utiliser "#define" aussi pour remplacer un appel de fonction ou de proc&eacute;dure</dt>
+                </dl>
+                
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">Algorithmique</th>
+                            <th style="padding: 10px;">C</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Constante C1 = 'a'</td>
+                            <td style="padding: 10px;">const char C1 = 'a';<br />ou<br />#define C1 'a'</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">C2 = '#13' (Return)</td>
+                            <td style="padding: 10px;">const char C2 = '\13';<br />ou<br />#define C2 '\13'</td>
+                        </tr>
+                        <tr>
+                            <td> style="padding: 10px;"C3 = "abc"</td>
+                            <td style="padding: 10px;">const char C3 = "abc";<br />ou<br />#define C3 "abc"</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Nmax = 100</td>
+                            <td style="padding: 10px;">const int Nmax = 100;<br />#define Nmax 100</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;"></td>
+                            <td style="padding: 10px;">#define fin printf("Fin de programme")</td>
+                        </tr>
+                    </table>
+                </center>
+            </article>
+            
+            <article>
+                <h3>Les types d'object simples</h3>
+                
+                <p>&#9679; Type Entier</p>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">C</th>
+                            <th style="padding: 10px;">Valeur sur des mots 16 bits</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">char</td>
+                            <td style="padding: 10px;">-128...127</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">unsigned char</td>
+                            <td style="padding: 10px;">0...255</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">int / short int / short</td>
+                            <td style="padding: 10px;">-32768...32767</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">unsigned int / unsigned</td>
+                            <td style="padding: 10px;">0...65535</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">long int / long</td>
+                            <td style="padding: 10px;">-2147483648...2147483647</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">unsigned long int</td>
+                            <td style="padding: 10px;">0...4294967295</td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <p>&#9679; Type R&eacute;el</p>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">C</th>
+                            <th style="padding: 10px;">Valeur sur des mots 16 bits</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">float</td>
+                            <td style="padding: 10px;">3.4 E<sup>-38</sup>...3.4 E<sup>38</sup></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">long float / double</td>
+                            <td style="padding: 10px;">1.7 E<sup>-308</sup>...1.7E<sup>308</sup></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">long double</td>
+                            <td style="padding: 10px;">3.4 E<sup>-4932</sup>...1.1 E<sup>4932</sup></td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <p>&#9679; Type Caract&egrave;re</p>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">Algorithmique</th>
+                            <th style="padding: 10px;">C</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Caract&egrave;re</td>
+                            <td style="padding: 10px;">char</td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <fieldset style="margin-top: 10px;">
+                    <legend><b>Exemple</b>:</legend>
+                    
+                    <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">Algorithmique</th>
+                            <th style="padding: 10px;">C</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">C : Caract&egrave;re<br />c &larr; "b"</td>
+                            <td style="padding: 10px;">char c;<br />c= 'b';</td>
+                        </tr>
+                    </table>
+                </center>
+                </fieldset>
+                
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <p>Le type "<i>char</i>" repr&eacute;sente en m&ecirc;me temps le caract&egrave;re et son code <b>ASCII</b>.</p>
+                </div>
+                
+                <p>&#9679; Type Bool&eacute;en</p>
+                <dl style="color: grey;">
+                    <dd>bool x;</dd>
+                    <dd>x = true;</dd>
+                </dl>
+                
+                <b>Les op&eacute;rateurs logiques:</b>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">Algorithmique</th>
+                            <th style="padding: 10px;">C</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Vrai</td>
+                            <td style="padding: 10px;">1 ou true</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Faux</td>
+                            <td style="padding: 10px;">0 ou false</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Non et Ou</td>
+                            <td style="padding: 10px;">! &amp;&amp; ||</td>
+                        </tr>
+                    </table>
+                </center>
+            </article>
+            
+            <article>
+                <h3>Les intructions de base</h3>
+                
+                <p>&#9679; Affectation</p>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">Algorithmique</th>
+                            <th style="padding: 10px;">C</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">&lt;Variable&gt; &larr; &lt;Expression&gt;</td>
+                            <td style="padding: 10px;">&lt;Variable&gt; = &lt;Expression&gt;;</td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <fieldset style="margin-top: 10px;">
+                    <legend><b>Exemple</b>:</legend>
+                    
+                    <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">Algorithmique</th>
+                            <th style="padding: 10px;">C</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">i &larr; i + 1</td>
+                            <td style="padding: 10px;">i = i + 1;</td>
+                        </tr>
+                    </table>
+                </center>
+                </fieldset>
+                
+                <p>&#9679; La sp&eacute;cification de format permet de pr&eacute;ciser le format des variables &agrave; lire dans l'ordre</p>
+                <p>&#9679; Le format de chaque variable est d&eacute;crit par un code commençant par le caract&egrave;re "%" suivi d'un symbole qui d&eacute;pend de la variable d&eacute;crite</p>
+                
+                <center>
+                    <table class="table" style="border: 1px solid black;">
+                        <tr>
+                            <th style="padding: 10px; border-bottom: 1px solid black; border-right: 1px solid black;">Type</th>
+                            <th style="padding: 10px; border-bottom: 1px solid black; border-right: 1px solid black;">Format du type</th>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid black; padding: 0px 5px;">int</td>
+                            <td style="padding: 0px 5px;">%d %X - Affich&eacute; en d&eacute;cimal ou en hexad&eacute;cemal</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid black; padding: 0px 5px;">unsigned int</td>
+                            <td style="padding: 0px 5px;">%u %o %x - Affich&eacute; en d&eacute;cimal, en octal  ou en hexad&eacute;cemal</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid black; padding: 0px 5px;">long</td>
+                            <td style="padding: 0px 5px;">%ld</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid black; padding: 0px 5px;">unsigned long</td>
+                            <td style="padding: 0px 5px;">%lu</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid black; padding: 0px 5px;">float</td>
+                            <td style="padding: 0px 5px;">%f %e %E - notations d&eacute;cimale, exponentielle avec e ou E</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid black; padding: 0px 5px;">double</td>
+                            <td style="padding: 0px 5px;">%lf %le %lE  - notations d&eacute;cimale, exponentielle avec e ou E</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid black; padding: 0px 5px;">long double</td>
+                            <td style="padding: 0px 5px;">%lf %le %lE</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid black; padding: 0px 5px;">char</td>
+                            <td style="padding: 0px 5px;">%c - caract&egrave;re</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid black; padding: 0px 5px;">char*</td>
+                            <td style="padding: 0px 5px;">%s - cha&icirc;n de caract&egrave;res</td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <p>&#9679; Lecture</p>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">Algorithmique</th>
+                            <th style="padding: 10px;">C</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Lire(&lt;Variable1&gt;, &lt;Variable2&gt;, ...)</td>
+                            <td style="padding: 10px;">scanf(&lt;sp&eacute;cification-format&gt;, &lt;adresse-variable1&gt;, &lt;adresse-variable2&gt;, ...);<br />ou<br />&lt;Variable-Caract&agrave;re&gt; = getchar();<br />ou<br />gets(&lt;Variable-Cha&icirc;ne&gt;;</td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <p>&#9679; L'adresse de la variable &agrave; lire est not&eacute;e par le caractère « & » suivi du nom de la variable.</p>
+                <p>&#9679; Des s&eacute;parateurs peuvent &ecirc;tre utilis&eacute;s.</p>
+                <p>&#9679; Si on place l'un des s&eacute;parateurs suivants entre deux valeurs cons&eacute;cutives, on a:</p>
+                <center>
+                    <table border="1" style="border-collapse: collapse;">
+                        <tr>
+                            <th style="padding: 10px;">S&eacute;parateur</th>
+                            <th style="padding: 10px;">Signification</th>
+                        </tr>
+                        <tr>
+                            <td>&lt;espace&gt;</td>
+                            <td>Caract&egrave;re "espace" entre les deux valeurs cons&eacute;cutives.</td>
+                        </tr>
+                        <tr>
+                            <td>\t</td>
+                            <td>Caract&egrave;re "tabulation".</td>
+                        </tr>
+                        <tr>
+                            <td>\b</td>
+                            <td>Caract&egrave;re "curseur arri&egrave;re".</td>
+                        </tr>
+                        <tr>
+                            <td>\r</td>
+                            <td>Caract&egrave;re "retour" d&eacute;but de ligne.</td>
+                        </tr>
+                        <tr>
+                            <td>\n</td>
+                            <td>Caract&egrave;re "fin de ligne".</td>
+                        </tr>
+                        <tr>
+                            <td>\"</td>
+                            <td>Caract&egrave;re "<b>"</b>".</td>
+                        </tr>
+                        <tr>
+                            <td>\\</td>
+                            <td>Caract&egrave;re "\".</td>
+                        </tr>
+                        <tr>
+                            <td>\0</td>
+                            <td>Caract&egrave;re "NULL" ou vide.</td>
+                        </tr>
+                        <tr>
+                            <td>\a</td>
+                            <td>Caract&egrave;re "Bip sonore"</td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <fieldset>
+                    <legend><b>Exemples</b>:</legend>
+                    <dl>
+                        <dt>&#9679; Lecture d'un entier a:</dt>
+                        <dd>scanf("%d", &amp;a);</dd>
+                        <dt>&#9679; Lecture d'un r&eacute;el b:</dt>
+                        <dd>scanf("%f", &amp;b);</dd>
+                        <dt>&#9679; Lecture d'un caract&egrave;re r:</dt>
+                        <dd>scanf("%c", &amp;r);</dd>
+                        <dt>&#9679; Lecture avec s&eacute;parateur:</dt>
+                        <dd>scanf("%d %f %c", &amp;a, &amp;b, &amp;r);</dd>
+                    </dl>
+                </fieldset>
+                
+                <p>&#9679; Ecriture</p>
+                <center>
+                    <table border="1" class="table">
+                        <tr>
+                            <th style="padding: 10px;">Algorithmique</th>
+                            <th style="padding: 10px;">C</th>
+                        </tr>
+                        <tr>
+                            <td>Ecrire(&lt;Expression1&gt;[:&lt;format&gt;], &lt;Expression2&gt;[:&lt;format&gt;])</td>
+                            <td>printf(&lt;sp&eacute;cification-format&gt;, &lt;expression1&gt;, &lt;expression2&gt;,...);<br />ou<br />putchar(&lt;VariableCaract&egrave;re&gt;);<br />ou<br />puts(&lt;VariableCha&icirc;ne&gt;);</td>
+                        </tr>
+                    </table>
+                </center>
+                
+                <fieldset>
+                    <legend><b>Exemples</b>:</legend>
+                    <dl>
+                        <dt>&#9679; Afficher un message:</dt>
+                        <dd>printf(" ***** Bonjour &agrave; tous ***** ");</dd>
+                        <dd>puts(" ***** Bonjour &agrave; yous ***** ");</dd><br />
+                        <dt>&#9679; Afficher une variable de type entier:</dt>
+                        <dd>printf("%d", a);</dd><br />
+                        <dt>&#9679; Afficher une variable de type r&eacute;el:</dt>
+                        <dd>printf("%.2f", b);</dd><br />
+                        <dt>&#9679; Afficher une variable de type caract&egrave;re:</dt>
+                        <dd>printf("%c", r);</dd><br />
+                        <dt>&#9679; Afficher message et variables:</dt>
+                        <dd>printf("Les valeurs saisies : %d %f %c \n", a,b,r);</dd>
+                    </dl>
+                </fieldset>
+                
+                <div class="sheet" style="margin-top: 10px;">
+                    <label>Affichage de code ASCII</label>
+                    <span>
+                        <br />
+                        <span class="clang-include">#include &lt;stdio.h&gt;</span><br /><br />
+                        <span class="clang-keyword">void</span> main()<br />
+                        {
+                        <dd><span class="clang-keyword">char</span> c = 'A';</dd>
+                        <dd>c = c + 1;</dd>
+                        <dd><span class="clang-comment">// Le r&eacute;sultat est 'B'</span></dd>
+                        <dd><span class="clang-function">printf</span>(<span class="clang-string">"%c \n"</span>, c);</dd>
+                        <dd><span class="clang-comment">// Le r&eacute;sultat est le code ASCII 98</span></dd>
+                        <dd><span class="clang-function">printf</span>(<span class="clang-string">"%d \n"</span>, c);</dd>
+                        }
+                    </span>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+=</html>

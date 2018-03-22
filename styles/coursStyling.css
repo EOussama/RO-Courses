@@ -1,0 +1,180 @@
+/*---------------------------------------------------------------------[Cours Styling]------------------------------------------------------------------*/
+
+#main
+{
+    height: 100%;
+    width: 82%;
+    margin: auto;
+    padding-bottom: 110px;
+}
+
+/*---------------------[Side bar]--------------------- */
+#sidebar
+{
+    border: 1px solid black;
+    height: 500px;
+    width: 18%;
+    float:left;
+    margin: auto;
+    margin-top: -60px;
+    background-color: black;
+    transition-property: margin-left;
+    transition-duration: .5s;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+#sidebar ul li
+{
+    font-family: monospace, sans-serif;
+    font-size: 16px;
+    transition: .7s;
+    cursor: default;
+    padding: 15px;
+    margin-left: -40px;
+}
+
+#sidebar ul li:first-child
+{
+    font-size: 18px;
+    font-weight: bolder;
+    margin-top: -16px;
+    background-color: azure;
+}
+
+#sidebar ul { list-style-type: none; }
+
+#sidebar ul li a 
+{
+    display: block;
+    position: relative;
+    left: 0px;
+    transition: left .6s ease;
+    text-decoration: none;
+    cursor: pointer;
+    color: azure;
+}
+
+#sidebar ul li:visited { color: azure; }
+
+#sidebar ul li > a:hover
+{
+    text-shadow: 1px 1px 4px azure;
+    left: 10px;
+}
+
+#sidebar ul li:active:not(:first-child) { background-color: cadetblue; }
+
+#active
+{ 
+    font-weight: bold;
+    border-left: 6px solid azure;
+}
+
+#menu_toggle {
+    float: right;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------*/
+
+/*-----------------------[Cours]---------------------- */
+#course-title 
+{
+    position: relative;
+    top: -30px;
+    display: block;
+    text-align: center;
+    font-family: tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: azure;
+    text-shadow: 2px 2px 1px cadetblue, -2px -2px 1px cadetblue;
+}
+
+.cours
+{
+    margin: auto;
+    margin-top: 20px;
+    height: 200px;
+    width: 750px;
+    border: 2px solid cadetblue;
+    border-top: 35px solid cadetblue;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px black;
+    transition: .7s;
+}
+
+.crTitle
+{
+    position: relative;
+    top: -47px;
+    left: 5px;
+    color: azure;
+    font-family: monospace, sans-serif;
+    font-weight:  bold;
+}
+
+.cours img{
+    position: relative;
+    top: -89px;
+    left: 720px;
+    width: 26px;
+    filter: grayscale(100%);
+    transition: .7s;
+}
+
+.cours:hover { box-shadow: 2px 2px 3px black; }
+
+.cours:hover > img { filter: grayscale(0%); }
+
+.cours:hover > p { color: black; }
+
+.cours:active{
+    box-shadow: 0px 0px 3px black;
+    border-color: darkslategray;
+}
+
+.cours p
+{
+    color: #444;
+    position: relative;
+    top: -100px;
+    padding: 10px;
+    font-family: monospace, sans-serif;
+    transition-property: color;
+    transition-duration: .5s;
+}
+
+#main a
+{ 
+    text-decoration: none; 
+    color: black;
+}
+
+#ct{
+    font-family: monospace, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#ct h1{
+    color: cadetblue;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#ct h3
+{
+    font-size: 30px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#ct hr{
+    width: 50%;
+    height: 5px;
+    border: 0px solid white;
+    background: linear-gradient(to right, white, grey, white);
+}

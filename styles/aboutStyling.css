@@ -1,0 +1,33 @@
+/*----------------------------------------------------------------------About styling---------------------------------------------------------------- */
+
+section { height: 500px; }
+
+/*-------------------------[Contect]------------------------*/
+#content
+{
+    margin-left: 50px;
+    margin-top: 40px;
+    height: 260px;
+    width: 1250px;
+    padding: 20px;
+    border: 3px solid cadetblue;
+    border-left: 10px solid cadetblue;
+    border-radius: 5px;
+    font-family: monospace, sans-serif;
+    box-shadow: 4px 4px 8px black;
+    background: linear-gradient(to bottom, azure, lightcyan);
+}
+
+#content h2
+{
+    font-weight: bold;
+    color: cadetblue;
+}
+
+#content p a
+{ 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*----------------------------------------------------------*/

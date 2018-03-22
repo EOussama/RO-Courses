@@ -1,0 +1,21 @@
+/*---------------------------------------------------------------------[Syntax Highlight Styling]--------------------------------------------------------------*/
+
+/*------------------------[C language]-------------------------*/
+
+.clang-include { color: forestgreen; }
+
+.clang-keyword {
+    color: blue;
+    font-weight: bold;
+}
+
+.clang-function { font-weight: bold; }
+
+.clang-string { color: darkslategray; }
+
+.clang-comment {
+    font-style: italic;
+    color: darkgray;
+}
+
+/*-------------------------------------------------------------*/

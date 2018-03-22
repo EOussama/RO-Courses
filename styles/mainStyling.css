@@ -1,0 +1,189 @@
+/*----------------------------------------------------------------------Main styling---------------------------------------------------------------- */
+
+body 
+{ 
+    margin: 0px;
+    background: linear-gradient(to bottom, azure, white, azure);
+}
+
+::selection{
+    background-color: cadetblue;
+    color: azure;
+}
+
+/*-------------------------[Header]-------------------- */
+#header
+{
+    border-top: 8px solid black;
+    height: 250px;
+    background: linear-gradient(to bottom, darkcyan, cadetblue);
+    color: darkcyan;
+    cursor: default;
+    text-align: center;
+    font-family: monospace, sans-serif;
+    color: azure;
+    box-shadow: inset 0px 1px 4px black, inset -1px 0px 4px black;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+#header h1 
+{
+    font-size: 70px;
+    text-shadow: 1px 1px 4px black;
+}
+
+#header p { margin-top: -30px; }
+
+/*-----------------------------------------------------*/
+
+/*-------------------[Navigation bar]----------------- */
+nav
+{
+    margin-top: -16px;
+    background-color: black;
+    height: 40px;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+nav ul
+{
+    text-align: center;
+    cursor: default;
+}
+
+nav ul li
+{
+    font-family: monospace, sans-serif;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+nav ul li a
+{
+    display: block;
+    text-decoration: none;
+    color:azure;
+    position: relative;
+    top: 0px;
+    transition: top .5s ease;
+    transition: .7s;
+}
+
+nav ul li:visited { color: azure; }
+
+nav ul li:hover > a
+{
+    top: -4px;
+    text-shadow: 1px 1px 4px azure;
+}
+
+nav ul li:active
+{
+    background-color: cadetblue;
+    color: azure;
+}
+
+#active
+{
+    background-color: cadetblue;
+    color: azure;
+}
+
+/*-----------------------------------------------------*/
+
+/*---------------------[Footer]--------------------- */
+
+footer
+{
+    width: 100%;
+    height: 300px;
+    border-top: 5px solid black;
+    border-bottom: 30px solid black;
+    box-shadow: inset -3px -3px 5px black, inset 0px 3px 5px black;
+    background: linear-gradient(to top, darkcyan, cadetblue);
+}
+
+footer summary
+{
+    text-align: center;
+    font-family: monospace, sans-serif;
+    color: azure;
+}
+
+footer summary h2
+{
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 1px 1px 4px black;
+}
+
+footer summary #creators { margin-top: -20px; }
+
+footer summary #creationDate 
+{
+    margin-top: 8px; 
+    font-size: 12px;
+}
+footer summary table tr td { padding: 10px; }
+
+.Creatorinfo
+{
+    width: 250px;
+    height: 140px;
+    display: inline-block;
+    background-color: teal;
+    border-left: 8px solid azure;
+    box-shadow: 4px 4px 8px black;
+}
+
+.Creatorinfo p
+{
+    margin-left: 25px;
+    text-align: left;
+    font-weight: bold;
+    transition: .7s;
+    cursor: default;
+}
+
+.Creatorinfo ul li 
+{
+    margin-left: -15px;
+    list-style-type: none;
+    width: 200px;
+    background-color: azure;
+    transition: .7s; 
+}
+
+.Creatorinfo ul li a
+{
+    padding-top: -4px;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-top 5px;
+    transition: .7s; 
+}
+
+.Creatorinfo img 
+{
+    position: relative;
+    top: 2px;
+    left: 2px;
+    filter: grayscale(100%);
+    transition: .7s; 
+}
+
+.Creatorinfo ul li a:hover > img { filter: grayscale(0%); }
+
+.Creatorinfo ul li a:hover { color: cadetblue; }
+
+#goUp { margin: -10px auto; }
+
+/*-----------------------------------------------------*/

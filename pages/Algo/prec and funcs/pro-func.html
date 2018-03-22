@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours d'algorithme</h1>
+                <h3>Les proc&eacute;dures et les fonctions</h3>
+                <hr />
+            </div>
+            
+            <article>
+                <h3>Introduction</h3>
+                <p>&#9679; Les proc&eacute;dures et fonctions permettent d'isoler des instructions dans un <u>sousprogramme</u> interne au programme principal.</p>
+            
+                <dl>
+                    <dt>&#9679; <b>Les Avantages</b></dt><br />
+                    <dd><b>La complexit&eacute;</b>: Lorsque l'algorithme est complexe, il est pr&eacute;f&eacute;rable d'organiser les instructions au sein de proc&eacute;dures ou fonctions afin de faciliter la logique globale du programme.</dd><br />
+                    <dd><b>La r&eacute;utilisabilit&eacute;</b>: Lorsqu'une s&eacute;quence d'instructions est r&eacute;p&eacute;t&eacute;e plus d'une fois dans un programme, on peut la regrouper dans une proc&eacute;dure ou fonction.</dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Les proc&eacute;dures</h3>
+                <p>&#9679; Une proc&eacute;dure est une suite d'instructions servant &agrave; r&eacute;aliser une t&acirc;che pr&eacute;cise en fonction d'un certain nombre de param&egrave;tres (arguments).</p>
+                
+                <h4>D&eacute;claration</h4>
+                <dl>
+                    <dt>&#9679; Dans le pseudo-langage, une proc&eacute;dure se d&eacute;clare de la mani&egrave;re suivante:</dt>
+                    <dd><b>PROCEDURE</b> <i>nom_de_la_procedure (type_param nom_param, type_param nom_param, ...)</i></dd>
+                    <dd><i>Variables locale</i></dd>
+                    <dd><b>DEBUT</b></dd>
+                    <dd style="margin-left: 65px;"><i>actions</i></dd>
+                    <dd><b>FIN</b></dd>
+                </dl>
+                
+                <h4>Appel</h4>
+                <p>&#9679; Pour utiliser (ou appeler) la proc&eacute;dure dans un programme appelant, on &eacute;crit: <font style="color: red;">Nom_de_la_proc&eacute;dure  ( variable1, variable2, variable3, variable4, ...)</font></p>
+                <p>&#9679; A chaque param&egrave;tre on associe un nom de variable connue dans le programme appelant ou bien une valeur</p>
+                
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <p>Les variables que l'on d&eacute;clare localement &agrave; la proc&eacute;dure ne sont connues que dans cette proc&eacute;dure.</p>
+                </div>
+                
+                <fieldset style="margin-top: 20px;">
+                    <legend>Exemple d'&eacute;change de variables</legend>
+                    <p>&#9679; Algorithme qui lit deux nombres r&eacute;els et permute leurs valeurs.</p>
+                    
+                    <div class="sheet">
+                        <label>Sans proc&eacute;dure</label>
+                        <span>
+                            <br />
+                            <b>Algorithme</b> Echange<br />
+                            <b>Variables</b> a, b, c : <b>r&eacute;el</b><br />
+                            <b>D&eacute;but</b><br />
+                            <dd><b>Ecrire</b>("Entrez un nombre:")</dd>
+                            <dd><b>Lire</b>(a)</dd>
+                            <dd><b>Ecrire</b>("Entrez un nombre:")</dd>
+                            <dd><b>Lire</b>(b)</dd>
+                            <dd>c &larr; a</dd>
+                            <dd>a &larr; b</dd>
+                            <dd>b &larr; c</dd>
+                            <b>Fin</b>
+                        </span>
+                    </div>
+
+                <div class="sheet" style="margin-top: 10px;">
+                    <label>Avec une proc&eacute;dure</label>
+                    <span>
+                       <br />
+                        <b>Algorithme</b> Echange<br />
+                        <b>PROCEDURE</b> &eacute;changer (<b>r&eacute;el</b> V1, <b>r&eacute;el</b> V2)<br />
+                        <b>Variables</b> tmp : <b>r&eacute;el</b><br />
+                        <b>D&eacute;but</b>
+                        <dd>tmp &larr; V1</dd>
+                        <dd>V1 &larr; V2</dd>
+                        <dd>V2 &larr; tmp</dd>
+                        <b>Fin</b><br /><br />
+                        <b>Variables</b> a, b, c : <b>r&eacute;el</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Entrez un nombre:")</dd>
+                        <dd><b>Lire</b>(a)</dd>
+                        <dd><b>Ecrire</b>("Entrez un nombre:")</dd>
+                        <dd><b>Lire</b>(b)</dd>
+                        <dd>&eacute;changer(a, b)</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                    
+                <div class="sheet" style="margin-top: 10px;">
+                    <label>Avec deux proc&eacute;dures</label>
+                    <span>
+                       <br />
+                        <b>Algorithme</b> Echange<br />
+                        <b>PROCEDURE</b> &eacute;changer (<b>r&eacute;el</b> V1, <b>r&eacute;el</b> V2)<br />
+                        <b>Variables</b> tmp : <b>r&eacute;el</b><br />
+                        <b>D&eacute;but</b>
+                        <dd>tmp &larr; V1</dd>
+                        <dd>V1 &larr; V2</dd>
+                        <dd>V2 &larr; tmp</dd>
+                        <b>Fin</b><br /><br />
+                        <b>PROCEDURE</b> lecture (<b>r&eacute;el</b> V3)<br />
+                        <b>D&eacute;but</b>
+                        <dd><b>Ecrire</b>("Entrez un nombre:")</dd>
+                        <dd><b>Lire</b>(V3)</dd>
+                        <b>Fin</b><br /><br />
+                        <b>Variables</b> a, b, c : <b>r&eacute;el</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd>lecture(a)</dd>
+                        <dd>lecture(b)</dd>
+                        <dd>&eacute;changer(a, b)</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                 
+                </fieldset>
+                
+                <fieldset style="margin-top: 20px;">
+                    <legend>Exemple de remplissage de tableaux</legend>
+                    <p>&#9679; Algorithme qui d&eacute;clare deux tableaux d'entiers de taille 10 et lit un entier a, et remplit le premier tableau avec des 1 et le deuxi&egrave;me avec la valeur de a.</p>
+                    
+                <div class="sheet">
+                    <label>Sans proc&eacute;dure</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Remp_Tab<br />
+                        <b>Variables</b> a, i : <b>entier</b><br />
+                        <dd style="margin-left: 65px;"> <b>Tableau</b> tab1[10], tab2[10] : <b>entier</b></dd>
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Entrez un nombre:")</dd>
+                        <dd><b>Lire</b>(a)</dd>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> 9 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">tab1[i] &larr; 1</dd>
+                        <dd><b>FinPour</b></dd>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> 9 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">tab2[i] &larr; a</dd>
+                        <dd><b>FinPour</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                 
+                <div class="sheet" style="margin-top: 10px;">
+                    <label>Avec une proc&eacute;dure</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Remp_Tab<br />
+                        <b>PROCEDURE</b> remplissage (<b>entier</b> nombre, <b>entier Tableau</b> tab[10])<br />
+                        <b>Variables</b> i : <b>entier</b><br />
+                        <b>D&eacute;but</b>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> 9 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">tab[i] &larr; nombre</dd>
+                        <dd><b>FinPour</b></dd>
+                        <b>Fin</b><br /><br />
+                        <b>Variables</b> a, i : <b>entier</b><br />
+                        <dd style="margin-left: 65px;"> <b>Tableau</b> tab1[10], tab2[10] : <b>entier</b></dd>
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Entrez un nombre:")</dd>
+                        <dd><b>Lire</b>(a)</dd>
+                        <dd>remplissage(1, tab1)</dd>
+                        <dd>remplissage(a, tab2)</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                    
+                </fieldset>
+                
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <p>Le nombre de param&egrave;tres dans l'appel d'une proc&eacute;dure doit correspondre au nombre de param&egrave;tres de la proc&eacute;dure lors de sa d&eacute;finition.</p>
+                    <p>Le type du <b>k</b>i&egrave;me param&egrave;tres dans l'appel d'une proc&eacute;dure doit correspondre au type du <b>k</b>i&egrave;me param&egrave;tre de la proc&eacute;dure lors de sa d&eacute;finition.</p>
+                </div>
+                
+                <h4>Passage par valeur</h4>
+                <p>&#9679; Lorsque nous souhaitons que la valeur d'une variable du programme appelant ne soit pas modifi&eacute;e, elle devra alors &ecirc;tre pass&eacute;e par valeur.</p>
+                <p>&#9679; La proc&eacute;dure ou la fonction qui la manipule recevra cette valeur en entr&eacute;e du programme mais il s'agira de la copie en m&eacute;moire de la valeur de la variable d'origine.</p>
+                <p>&#9679; Dans notre pseudo, le passage par valeur est indiqu&eacute; par le mot cl&eacute; <b>val</b>.</p>
+                
+                <h4>Passage par r&eacute;f&eacute;rence</h4>
+                <p>&#9679; Lorsque nous utilisons le passage d'une valeur par r&eacute;f&eacute;rence, nous indiquons non sa valeur mais la r&eacute;f&eacute;rence en m&eacute;moire de celle-ci. Ainsi, la proc&eacute;dure ou fonction manipule donc le m&ecirc;me espace de m&eacute;moire.</p>
+                <p>&#9679; Toute modification apport&eacute;e &agrave; la variable manipul&eacute;e par la fonction ou proc&eacute;dure touchera donc la variable d'origine.</p>
+                <p>&#9679; Attention donc au choix effectu&eacute; lors de la transmission des param&egrave;tres &agrave; une proc&eacute;dure!</p>
+                <p>&#9679; Dans notre pseudo, le passage par r&eacute;f&eacute;rence est indiqu&eacute; par le mot cl&eacute; <b>var</b>.</p>
+                
+                <p>&#9679; Exemple:</p>
+                <div class="sheet" style="margin-top: 10px;">
+                    <label>Remplissage d'un tableau</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Remp_Tab<br />
+                        <b>PROCEDURE</b> &eacute;changer (<b>VAR entier</b> V1, <b>entier</b> V2)<br />
+                        <b>VariablesTableau</b> tmp : <b>entier</b><br />
+                        <b>D&eacute;but</b>
+                        <dd>tmp &larr; V1</dd>
+                        <dd>V1 &larr; V2</dd>
+                        <dd>V2 &larr; tmp</dd>
+                        <b>Fin</b><br /><br />
+                        <b>Variables</b> <b>Tableau</b> tab[10], i : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Entrez un valeur:")</dd>
+                        <dd><b>Lire</b>(a)</dd>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> 9 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">tab[i] &larr; a</dd>
+                        <dd><b>FinPour</b></dd>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> 4 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;">&eacute;hanger(tab[i], tab[11-i]) </dd>
+                        <dd><b>FinPour</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+            </article>
+            
+            <article>
+                <h3>Les fonctions</h3>
+                <p>&#9679; Une fonction est une proc&eacute;dure dont le but est de d&eacute;terminer une valeur et de la retourner au programme appelant.</p>
+                
+                <dl>
+                    <dt>&#9679; Dans le pseudo-langage, elle se d&eacute;clare de la mani&egrave;re suivante:</dt>
+                    <dd><b>type FONCTION</b> <i>nom_de_la_fonction ( </i><b>type</b> <i>nom, </i><b>type</b> <i>nom, ...)</i></dd>
+                    <dd><i>D&eacute;clarations de variables locales</i></dd>
+                    <dd><b>D&eacute;but</b></dd>
+                    <dd style="margin-left: 65px;"><i>actions</i></dd>
+                    <dd style="margin-left: 65px;"><b>Retourne</b> valeur</dd>
+                    <dd><b>Fin</b></dd>
+                </dl>
+                
+                <p>&#9679; Les m&ecirc;mes remarques que pour la proc&eacute;dure s'appliquent.</p>
+                <p>&#9679; De plus, il faut noter que la fonction retourne une valeur et que donc &agrave; la d&eacute;claration on doit indiquer son type, c'est &agrave; dire le type de cette valeur.</p>
+                <p>&#9679; Une fonction ne retourne jamais un tableau.</p>
+                
+                <dl>
+                    <dt>&#9679; Pour utiliser une fonction dans un programme appelant, on l'appelle de la fa&ccedil;on suivante:</dt>
+                    <dd><i>variable</i> &larr; <i>nom_de_la fonction ( variable1 ,  valeur2  , variable3 ...)</i></dd>
+                </dl>
+                
+                <p>&#9679; <b>Exemple</b>: Ecrire une fonction qui retourne la somme de deux entiers.</p>
+                <div class="sheet" style="margin-top: 10px;">
+                    <label>Somme de deux nombres</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> add_func<br />
+                        <b>entier FONCTION</b> somme (<b>entier</b> a, <b>entier</b> b)<br />
+                        <b>VariablesTableau</b> S : <b>entier</b><br />
+                        <b>D&eacute;but</b>
+                        <dd>S &larr; a + b</dd>
+                        <dd><b>Retourne</b> S</dd>
+                        <b>Fin</b><br /><br />
+                        <b>Variables</b> i, j, k : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Entrez un nombre:")</dd>
+                        <dd><b>Lire</b>(i)</dd>
+                        <dd><b>Ecrire</b>("Entrez un nombre:")</dd>
+                        <dd><b>Lire</b>(j)</dd>
+                        <dd>k &larr; somme(i, j)</dd>
+                        <dd><b>Ecrire</b>("la somme est ", k)</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+            </article>
+            
+            <article>
+                <h3>La R&eacute;cursivit&eacute;</h3>
+                
+                <p>&#9679; <b>D&eacute;finition</b>: Un algorithme est dit r&eacute;cursif lorsqu'il est d&eacute;fini en fonction de lui m&ecirc;me.</p>
+                <p>&#9679; <b>R&eacute;cursivit&eacute; simple</b>: La fonction puissance x &rarr; x<sup>n</sup>. Cette fonction peut &ecirc;tre d&eacute;finie r&eacute;cursivement:</p>
+                <center><img src="prob.PNG" alt="Math Syntax" width="200px;"/></center>
+                
+                <h4>It&eacute;ration et R&eacute;cursivit&eacute;</h4>
+                <p>&#9679; <b>Exemple</b>: Calcul de factoriel</p>
+                <center><img src="iter.PNG" alt="Pres_iter" width="400px;"/> <img src="rec.PNG" alt="pres_rec" width="400px;" /></center>
+                <p>&#9679; Un module (fonction ou proc&eacute;dure) peut s'appeler lui m&ecirc;me: on dit que c'est un module <b>r&eacute;cursif</b>.</p>
+                <p>&#9679; Tout module r&eacute;cursif doit poss&eacute;der un cas limite (cas trivial) qui arr&ecirc;te la r&eacute;cursivit&eacute;.</p>
+                <p>&#9679; Liste des appels de la fonction factoriel <font style="color: darkorchid;">(cas du n=4)</font>.</p>
+                <center><img src="fact-list.PNG" alt="factorial list" width="400px;"/></center>
+                
+                <p>&#9679; Une fonction est d&eacute;finie r&eacute;cursivement lorsque la valeur de la fonction en un point x est d&eacute;finie par rapport &agrave; sa valeur en un point strictement "<u>plus petit</u>".<br />
+                De ce fait, le calcul se fait de proche en proche, jusqu'&agrave; atteindre le plus petit &eacute;l&eacute;ment pour lequel il faut une valeur imm&eacute;diate (<i>c'est-&agrave;-dire non r&eacute;cursive</i>).<br />
+                Le corps d'une fonction r&eacute;cursive doit toujours exprimer un choix, soit par une expression conditionnelle, soit par une d&eacute;finition par cas.<br />
+                Au moins un cas terminal rend une valeur qui n'utilise pas la fonction d&eacute;finie.</p>
+            </article>
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

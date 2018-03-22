@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours d'algorithme</h1>
+                <h3>Les Tests ou structures alternatives</h3>
+                <hr />
+            </div>
+                
+            <article>
+                <h3>La structure alternative</h3>
+                <p>&#9679; Il est souvent n&eacute;cessaire lorsque l'on &eacute;crit un programme de distinguer plusieurs cas conditionnant l'ex&eacute;cution de certaines instructions.</p>
+                <center><img src="arrow.PNG" alt="Arrow" /></center>
+                <p>&#9679; Utilisation d'une structure alternative : si on est dans tel cas, alors on fait cela sinon on fait ceci.</p>
+            </article>
+            
+            <article>
+                <h3>Les tests</h3>
+                <p>&#9679; Il n'y a que deux formes possibles pour un test.</p>
+                <div class="sheet">
+                    <label>Conditions</label>
+                    <span>
+                        <br />
+                        <img src="paths.PNG" alt="Paths" style="width: 200px; float: right;"/>
+                        <b>Algorithme</b> Conditions<br />
+                        <b>D&eacute;but</b><br />
+                        <dd style="color: grey; font-size: 12px;">Premi&eacute;re forme.</dd>
+                        <dd><b>Si</b> (Condition) <b>Alors</b></dd>
+                        <dd style="padding-left: 30px;">Instructions 1</dd>
+                        <dd><b>Finsi</b></dd><br />
+                        <dd style="color: grey; font-size: 12px;">seconde forme.</dd>
+                        <dd><b>Si </b>(Condition) <b>Alors</b></dd>
+                        <dd style="padding-left: 30px;">Instructions 2</dd>
+                        <dd><b>Sinon</b></dd>
+                        <dd style="padding-left: 30px;">Instructions 3</dd>
+                        <dd><b>Finsi</b><br /></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+            </article>
+
+            <article>
+                <h3>La structure alternative</h3>
+                <p>&#9679; si la condition est vraie, se sont les <b>instructions 1</b> qui seront ex&eacute;cut&eacute;es.</p>
+                <p>&#9679; si la condition est fausse, se sont les <b>instructions 2</b> qui seront ex&eacute;cut&eacute;es.</p>
+                <p>&#9679; la condition peut &ecirc;tre une <b>condition simple</b> ou une <b>condition compos&eacute;e</b> de plusieurs conditions.</p>
+            </article>
+            
+            <article>
+                <h3>Qu'est ce qu'une condition?</h3>
+                <p>&#9679; Une condition est une comparaison.</p>
+                <dl>
+                    <dt>&#9679; Une expression d&eacute;finie &agrave; partir d'un op&eacute;rateur de comparaison.</dt>
+                    <dd>&eacute;gal &agrave; =</dd>
+                    <dd>diff&eacute;rent de &lt;&gt;</dd>
+                    <dd>strictement plus petit que &lt;</dd>
+                    <dd>strictement plus grand que ></dd>
+                    <dd>plus petit ou &eacute;gal &agrave; &lt;=</dd>
+                    <dd>plus grand ou &eacute;gal &agrave; >=</dd>
+                    <dd>L'&eacute;valuation d'une condition est un bool&eacute;en </dd>
+                </dl>  
+            </article>
+            
+            <article>
+                <h3>La structure alternative</h3>
+                <p>&#9679; Ecrire un algorithme qui demande un nombre &agrave; l'utilisateur, et l'informe ensuite si ce nombre est positif ou n&eacute;gatif.</p>
+                
+                <div class="sheet">
+                    <label>Conditions d'entr&eacute;e</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Conditions d'ent&eacute;e<br />
+                        <b>Variables</b> x, y : <b>R&eacute;el</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Entrez un r&eacute;el: ")</dd>
+                        <dd><b>Lire</b>(x)</dd>
+                        <dd><b>Si</b>(x >= 0) <b>Alors</b></dd>
+                        <dd style="padding-left: 30px;">y &larr; x</dd>
+                        <dd><b>Sinon</b></dd>
+                        <dd style="padding-left: 30px;">y &larr; -x</dd>
+                        <dd><b>Finsi</b><br /></dd>
+                        <dd><b>Ecrire</b>("la valeur absolue de ", x, "est:", y)</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+
+            </article>
+            
+            <article>
+                <h3>Conditions compos&eacute;es</h3>
+                <dl>
+                    <dt>&#9679; Une condition compos&eacute;e est une condition form&eacute;e de plusieurs conditions simples reli&eacute;es par des op&eacute;rateurs logiques:</dt>
+                    <dd><i>ET, OU, OU exclusif (XOR) et NON</i></dd><br />
+                    <dt>&#9679; <b>Exemples</b>:</dt>
+                    <dd><i>x compris entre 2 et 6 : (x &gt; 2) ET (x &lt; 6)</i></dd>
+                    <dd><i>n divisible par 3 ou par 2 : (n%3=0) OU (n%2=0)</i></dd><br />
+                    <dt>&#9679; Dans une condition compos&eacute;e employant &agrave; la fois des op&eacute;rateurs ET et des op&eacute;rateurs OU, la pr&eacute;sence de parenth&egrave;ses poss&egrave;de une influence sur le r&eacute;sultat, tout comme dans le cas d'une expression num&eacute;rique (exemple multiplications et des additions).</dt><br />
+                    <dt>&#9679; L'&eacute;valuation d'une condition compos&eacute;e se fait selon des r&egrave;gles pr&eacute;sent&eacute;es g&eacute;n&eacute;ralement dans ce qu'on appelle tables de v&eacute;rit&eacute;.</dt>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Tables de v&eacute;rit&eacute;</h3>
+                <center>
+                    <div class="table">
+                    <table border="1">
+                        <tr>
+                            <th>C1</th>
+                            <th>C2</th>
+                            <th style="font-weight: bold;">C1 ET C2</th>
+                        </tr>
+                        <tr>
+                            <td>VRAI</td>
+                            <td>VRAI</td>
+                            <td style="font-weight: bold;">VRAI</td>
+                        </tr>
+                        <tr>
+                            <td>VRAI</td>
+                            <td>FAUX</td>
+                            <td style="font-weight: bold;">FAUX</td>
+                        </tr>
+                        <tr>
+                            <td>FAUX</td>
+                            <td>VRAI</td>
+                            <td style="font-weight: bold;">FAUX</td>
+                        </tr>
+                        <tr>
+                            <td>FAUX</td>
+                            <td>FAUX</td>
+                            <td style="font-weight: bold;">FAUX</td>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="table">
+                    <table border="1">
+                        <tr>
+                            <th>C1</th>
+                            <th>C2</th>
+                            <th style="font-weight: bold;">C1 OU C2</th>
+                        </tr>
+                        <tr>
+                            <td>VRAI</td>
+                            <td>VRAI</td>
+                            <td style="font-weight: bold;">VRAI</td>
+                        </tr>
+                        <tr>
+                            <td>VRAI</td>
+                            <td>FAUX</td>
+                            <td style="font-weight: bold;">VRAI</td>
+                        </tr>
+                        <tr>
+                            <td>FAUX</td>
+                            <td>VRAI</td>
+                            <td style="font-weight: bold;">VRAI</td>
+                        </tr>
+                        <tr>
+                            <td>FAUX</td>
+                            <td>FAUX</td>
+                            <td style="font-weight: bold;">FAUX</td>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="table">
+                    <table border="1">
+                        <tr>
+                            <th>C1</th>
+                            <th>C2</th>
+                            <th style="font-weight: bold;">C1 XOR C2</th>
+                        </tr>
+                        <tr>
+                            <td>VRAI</td>
+                            <td>VRAI</td>
+                            <td style="font-weight: bold;">FAUX</td>
+                        </tr>
+                        <tr>
+                            <td>VRAI</td>
+                            <td>FAUX</td>
+                            <td style="font-weight: bold;">VRAI</td>
+                        </tr>
+                        <tr>
+                            <td>FAUX</td>
+                            <td>VRAI</td>
+                            <td style="font-weight: bold;">VRAI</td>
+                        </tr>
+                        <tr>
+                            <td>FAUX</td>
+                            <td>FAUX</td>
+                            <td style="font-weight: bold;">FAUX</td>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="table">
+                    <table border="1">
+                        <tr>
+                            <th>C1</th>
+                            <th style="font-weight: bold;">NON C1</th>
+                        </tr>
+                        <tr>
+                            <td>VRAI</td>
+                            <td style="font-weight: bold;">FAUX</td>
+                        </tr>
+                        <tr>
+                            <td>FAUX</td>
+                            <td style="font-weight: bold;">VRAI</td>
+                        </tr>
+                    </table>
+                    </div>
+                </center>
+                <p>&#9679; Ecrire un algorithme qui demande deux nombres &agrave; l'utilisateur et l'informe ensuite si leur produit est n&eacute;gatif ou positif (on laisse de c&ocirc;t&eacute; le cas o&ugrave; le produit est nul). Attention toutefois : on ne doit <b>pas</b> calculer le produit des deux nombres.</p>
+                
+                <div class="sheet">
+                    <label>Conditions alternatives</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Conditions alt<br />
+                        <b>Variables</b> m, n : <b>R&eacute;el</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Entrez deux nombres: ")</dd>
+                        <dd><b>Lire</b>(m, n)</dd>
+                        <dd><b>Si</b>(((m &gt; 0) ET (n &gt; 0)) OU ((m &lt; 0) ET (n &lt; 0))) <b>Alors</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>("Leur produit est positif")</dd>
+                        <dd><b>Sinon</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>("Leur produit est n&eacute;gatif")</dd>
+                        <dd><b>Finsi</b><br /></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+            </article>
+            
+            <article>
+                <h3>Tests imbriqu&eacute;s</h3>
+                <p>&#9679; Les tests peuvent avoir un degr&eacute; quelconque d'imbrications.</p>
+                
+                <div class="sheet">
+                    <label>Conditions imbriqu&eacute;s</label>
+                    <span>
+                        <br />
+                        <img src="test_ambrique.PNG" alt="Diagrame" style="width: 250px; float: right;"/>
+                        <b>Algorithme</b> Conditions ambrt<br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Si</b> condition1 <b>Alors</b></dd>
+                        <dd style="padding-left: 30px;">instructions1</dd>
+                        <dd><b>Sinon</b></dd>
+                        <dd style="padding-left: 30px;"><b>Si</b> condition2 <b>Alors</b></dd>
+                        <dd style="padding-left: 60px;">instructions2</dd>
+                        <dd style="padding-left: 30px;"><b>Sinon</b></dd>
+                        <dd style="padding-left: 60px;">instructions3</dd>
+                        <dd style="padding-left: 30px;"><b>Finsi</b></dd>
+                        <dd><b>Finsi</b><br /></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                
+                <div class="sheet" style="margin-top: 20px;">
+                    <label>Conditions imbriqu&eacute;s</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Conditions nbr_scoop<br />
+                        <b>Variables</b> n : <b>R&eacute;el</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("entrez un nombre: ")</dd>
+                        <dd><b>Lire</b>(n)</dd>
+                        <dd><b>Si</b>(n &lt; 0) <b>Alors</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>("Ce nombre est n&eacute;gatif")</dd>
+                        <dd><b>Sinon</b></dd>
+                        <dd style="padding-left: 30px;"><b>Si</b>(n = 0) <b>Alors</b></dd>
+                        <dd style="padding-left: 60px;"><b>Ecrire</b>("Ce nombre est nul")</dd>
+                        <dd style="padding-left: 30px;"><b>Sinon</b></dd>
+                        <dd style="padding-left: 60px;"><b>Ecrire</b>("Ce nombre est positif")</dd>
+                        <dd style="padding-left: 30px;"><b>Finsi</b></dd>
+                        <dd><b>Finsi</b><br /></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <p>Dans cette version, si le nombre est n&eacute;gatif on ne fait qu'un seul test.</p>
+                </div>
+                
+                <div class="note">
+                    <h3>Conseil:</h3>
+                    <p>Utiliser les tests imbriqu&eacute;s pour limiter le nombre de tests et placer  d'abord les conditions les plus probables (minimiser la complexit&eacute;).</p>
+                </div>
+                
+            </article>
+            
+            <article>
+                <h3>Selon...cas</h3>
+                <p>&#9679; Afficher le jour correspondant au rang du jour dans la semaine qui est compris entre 1 et 7.</p>
+                
+                <div class="sheet">
+                    <label>Range conditions</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> jour de la semaine<br />
+                        <b>Variables</b> n : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Lire</b>(n)</dd>
+                        <dd><b>Selon</b>(n):</dd>
+                        <dd style="padding-left: 30px;"><b>Cas</b> n = 1: <b>Ecrire</b>("Lundi")</dd>
+                        <dd style="padding-left: 30px;"><b>Cas</b> n = 2: <b>Ecrire</b>("Mardi")</dd>
+                        <dd style="padding-left: 30px;"><b>Cas</b> n = 3: <b>Ecrire</b>("Mercredi")</dd>
+                        <dd style="padding-left: 30px;"><b>Cas</b> n = 4: <b>Ecrire</b>("Jeudi")</dd>
+                        <dd style="padding-left: 30px;"><b>Cas</b> n = 5: <b>Ecrire</b>("Vendredi")</dd>
+                        <dd style="padding-left: 30px;"><b>Cas</b> n = 6: <b>Ecrire</b>("Samedi")</dd>
+                        <dd style="padding-left: 30px;"><b>Cas</b> n = 7: <b>Ecrire</b>("Dimanche")</dd>
+                        <dd><b>Sinon</b> Ecrire("le num&eacute;ro doit &ecirc;tre compris entre 1 et 7")</dd>
+                        <dd><b>Fin Selon</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                
+                <dl>
+                    <dt>&#9679; <b>Syntaxe g&eacute;n&eacute;rale</b>:</dt>
+                    <dd><i>Selon &lt; nom de variable &gt;</i></dd>
+                    <dd><i>Cas <Condition>: &lt; instruction ou bloc &gt;</i></dd>
+                    <dd><i>Cas <Condition>: &lt; instruction ou bloc &gt;</i></dd>
+                    <dd><i>...</i></dd>
+                    <dd><i>[Sinon &lt; instruction ou bloc &gt;]</i></dd>
+                    <dd><i>Fin Selon</i></dd>
+                </dl>
+                
+            </article>            
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

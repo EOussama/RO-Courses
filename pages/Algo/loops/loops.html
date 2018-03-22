@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours d'algorithme</h1>
+                <h3>Structures it&eacute;ratives Les tableaux Les enregistrements</h3>
+                <hr />
+            </div>
+                
+             <article>
+                <h3>La structure r&eacute;p&eacute;titive (boucle)</h3>
+                <p>&#9679; On utilise la structure  r&eacute;p&eacute;titive si on veut r&eacute;p&eacute;ter des m&ecirc;mes actions (instructions) un certain nombre de fois.</p>
+                <p>&#9679; Ces actions seront ex&eacute;cut&eacute;es jusqu'&agrave; ce qu'une condition soit remplie.</p>
+                <p>&#9679; La plupart des langages de programmation proposent trois types de structure r&eacute;p&eacute;titive.</p>
+                 
+                <dl>
+                    <dt>&#9679; <b>Le TantQue</b>:</dt>
+                    <dd><i>TantQue (condition) Faire</i></dd>
+                    <dd><i>instructions</i></dd>
+                </dl>
+                <p>&#9679; Ce qui signifie: tant que la condition est vraie, on ex&eacute;cute les instructions.</p>
+                 
+                <h4>Structure TANT QUE...</h4>
+                <center><img src="tqestruct.PNG" alt="Structure de TQ" style="width: 450px;"/></center>
+                 
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <p>la v&eacute;rification de la condition s'effectue <b>avant les actions</b>. Celles-ci peuvent donc ne jamais &ecirc;tre ex&eacute;cut&eacute;es.</p>
+                </div>
+                 
+                <p style="margin-top: 20px;">&#9679; Algorithme qui demande &agrave; l'utilisateur de saisir un nombre entier positif et apr&egrave;s il affiche tous les nombres entiers positifs inferieurs ou &eacute;gale au nombre saisi par l'utilisateur.</p>
+                
+                <div class="sheet">
+                    <label>TantQue Algorithme</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Affichage<br />
+                        <b>Variables</b> n, i : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Donner un nombre entier positif:")</dd>
+                        <dd><b>Lire</b>(n)</dd>
+                        <dd>i &larr; 0</dd>
+                        <dd><b>TantQue</b>(i &lt;= n) <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>(i)</dd>
+                        <dd style="padding-left: 30px;">i &larr; i + 1</dd>
+                        <dd><b>FTQ</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                 
+                <dl>
+                    <dt>&#9679; <b>Le Faire TantQue</b>:</dt>
+                    <dd><i>Faire</i></dd>
+                    <dd><i>instructions</i></dd>
+                    <dd><i>TantQue (condition)</i></dd>
+                </dl>
+                <p>&#9679; Ce qui signifie: on ex&eacute;cute les instructions, tant que la condition est vraie.</p>
+                
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <p>la suite des instructions va s'ex&eacute;cuter au moins une fois.</p>
+                </div>
+                 
+                <h4>Structure FAIRE...TANT QUE...</h4>
+                <center><img src="ftqestruct.PNG" alt="Structure de TQ" style="width: 350px;"/></center>
+                 
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <p>la v&eacute;rification de la condition s'effectue apr&egrave;s les actions. Celles-ci sont donc ex&eacute;cut&eacute;es au moins une fois.</p>
+                </div><br />
+                 
+                <div class="sheet">
+                    <label>Algorithme d'affichage</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> rpttv<br />
+                        <b>Variables</b> n, i : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Donner un nombre entier positif:")</dd>
+                        <dd><b>Lire</b>(n)</dd>
+                        <dd>i &larr; 0</dd>
+                        <dd><b>Faire</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>(i)</dd>
+                        <dd style="padding-left: 30px;">i &larr; i + 1</dd>
+                        <dd><b>TantQue</b>(i &lt;= n)</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                 
+                <h4>Structure REPETER...JUSQU'A...</h4>
+                <center><img src="rpeatjq.PNG" alt="Structure de TQ" style="width: 350px;"/></center>
+                 
+                <div class="note">
+                    <h3>Remarque:</h3>
+                    <p>la v&eacute;rification de la condition s'effectue apr&egrave;s les actions. Celles-ci sont donc ex&eacute;cut&eacute;es au moins une fois.</p>
+                </div>
+                 
+                <p>&#9679; Algorithme qui demande &agrave; l'utilisateur de saisir un nombre entier positif et apr&egrave;s il affiche tous les nombres entiers positifs inferieurs ou &eacute;gale au nombre saisi par l'utilisateur.</p>
+                
+                <div class="sheet">
+                    <label>Algorithme d'affichage</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> rpttv<br />
+                        <b>Variables</b> n, i : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Donner un nombre entier positif:")</dd>
+                        <dd><b>Lire</b>(n)</dd>
+                        <dd>i &larr; 0</dd>
+                        <dd><b>R&eacute;p&eacute;ter</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>(i)</dd>
+                        <dd style="padding-left: 30px;">i &larr; i + 1</dd>
+                        <dd><b>Jusqu'&agrave;</b>(i = n)</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                 
+                <dl>
+                    <dt>&#9679; <b>Le Pour</b>:</dt>
+                    <dd><i>POUR variable DE valeur initiale  A valeur finale</i></dd>
+                    <dd><i>FAIRE</i></dd>
+                    <dd style="padding-left: 30px;"><i>instructions</i></dd>
+                    <dd><i>FinPour</i></dd>
+                </dl>
+                 
+                <p>&#9679; Structure r&eacute;p&eacute;titive avec un compteur.</p>
+                <p>&#9679; Le traitement s'arr&ecirc;te lorsque le compteur a atteint sa valeur finale.</p>
+                
+                <h4>Structure POUR</h4>
+                <dl style="font-weight: bold;">
+                    <dd>Pour indice de Val1 a Val2</dd>
+                    <dd>Faire</dd>
+                    <dd style="padding-left: 30px;">Actions</dd>
+                    <dd>FinPour</dd>
+                </dl>
+                <center><img src="forLoop.PNG" alt="Structure de TQ" style="width: 600px;"/></center>
+                
+                <p>&#9679; Algorithme qui demande &agrave; l'utilisateur de saisir un nombre entier positif et apr&egrave;s il affiche tous les nombres entiers positifs inferieurs ou &eacute;gale au nombre saisi par l'utilisateur.</p>
+             
+                <div class="sheet">
+                    <label>Algorithme d'affichage de nombres</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> nbrs_aff<br />
+                        <b>Variables</b> n, i : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Donner un nombre entier positif:")</dd>
+                        <dd><b>Lire</b>(n)</dd>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> n <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>(i)</dd>
+                        <dd><b>FinPour</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                
+                <div class="note">
+                    <h3>Note:</h3>
+                    <p>Le traitement ne doit pas modifier la variable de boucle.</p>
+                </div>
+                
+                <h4>Choisir Pour - TantQue... - Faire...TantQue...</h4>
+                <center><img src="allLoops.PNG" alt="Structure de TQ" style="width: 600px;"/></center>
+            </article>
+            
+            <article>
+                <h3>Les tableaux</h3>
+                
+                <p>&#9679; Regroupement de plusieurs variables de m&ecirc;me type sous un m&ecirc;me nom.</p>
+                <p>&#9679; Un tableau peut &ecirc;tre un ensemble de valeurs enti&egrave;res, r&eacute;elles, bool&eacute;ennes, caract&egrave;res.</p>
+                <p>&#9679; Structure r&eacute;p&eacute;titive avec un compteur.</p>
+                
+                <dl>
+                    <dt>&#9679; <b>D&eacute;claration:</b></dt>
+                    <dd><b>Tableau</b> nom_du_tableau[<i>longueur</i>] : <b>Type</b></dd><br />
+                    <dt>&#9679; <b>Exemples:</b></dt>
+                    <dd><b>Tableau</b> mot[<i>10</i>] : <b>Caractere</b></dd>
+                    <dd><b>Tableau</b> notes[<i>25</i>] : <b>Entier</b></dd>
+                </dl>
+                
+                <fieldset>                
+                <legend><b>Tableau</b> tab[<i>8</i>] : <b>Entier</b></legend>
+                <div class="tabcells">
+                    <table>
+                        <tr>
+                            <td>indices:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                        </tr>
+                        <tr>
+                            <td>tabs:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                    </table>
+                </div>
+                    
+                <p>&#9679; le <b>i</b>&egrave;me &eacute;l&eacute;ment de ce tableau sera adress&eacute; par tab[i].</p>
+                
+                <dl>
+                    <dt>&#9679; <b>Exemple</b>:</dt>
+                    <dd>tab[3] &larr; 13 <i><font style="color:grey;">la 4&egrave;me case du tableau</font></i></dd>
+                    <dd>tab[6] &larr; -4  <i><font style="color:grey;">la 7&egrave;me case du tableau</font></i></dd>
+                    <dd>
+                        <div class="tabcells">
+                        <table>
+                            <tr>
+                                <td>indices:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                            </tr>
+                            <tr>
+                                <td>tabs:</td><td></td><td></td><td></td><td class="filled-cell">16</td><td></td><td></td><td class="filled-cell">-4</td><td></td>
+                            </tr>
+                        </table>
+                        </div>
+                    </dd>
+                </dl>
+                </fieldset>
+                
+                <p>&#9679; <b>Ecrire</b>(tab[<i>4</i>]): le contenu du tableau &agrave; l'indice 4 est affich&eacute; &agrave; l'&eacute;cran.</p>
+                <p>&#9679; <b>Lire</b>(tab[<i>2</i>]): la valeur entr&eacute;e par l'utilisateur est enregistr&eacute;e dans le tableau &agrave; l'indice 2.</p>
+            
+                <div class="note">
+                    <h3>Attention:</h3>
+                    <dl>
+                        <dt>&#9679; tab &larr; 7 - <font style="color: red">INTERDIT</font></dt>
+                        <dt>&#9679; Ecrire(tab)  - <font style="color: red">INTERDIT</font></dt>
+                        <dt>&#9679; Lire(tab)  - <font style="color: red">INTERDIT</font></dt>
+                    </dl>
+                </div>
+                
+                <p>&#9679; Ecrire un algorithme qui permet de saisir les &eacute;l&eacute;ments d'un tableau des entiers de taille 10.</p>
+                <div class="sheet">
+                    <label>Algorithme de saisie d'un tableau</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Saisie d'un tableau<br />
+                        <b>Variables</b> i, <b>Tableau</b> tab[<i>10</i>] : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> 9 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>("Donner l'&eacute;l&eacute;ment" , i+1)</dd>
+                        <dd style="padding-left: 30px;"><b>Lire</b>(tab[<i>i</i>])</dd>
+                        <dd><b>FinPour</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                
+                <div class="sheet" style="margin-top: 20px;">
+                    <label>Algorithme d'affichage de tableau</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Afficher un tableau<br />
+                        <b>Variables</b> i, <b>Tableau</b> tab[<i>10</i>] : <b>entier</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> 9 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>("Donner l'&eacute;l&eacute;ment" , i+1)</dd>
+                        <dd style="padding-left: 30px;"><b>Lire</b>(tab[<i>i</i>])</dd>
+                        <dd><b>FinPour</b></dd>
+                        <dd><b>Pour</b> i <b>De</b> 0 <b>A</b> 9 <b>Faire</b></dd>
+                        <dd style="padding-left: 30px;"><b>Ecrire</b>("tab[" i "] = " , tab[i])</dd>
+                        <dd><b>FinPour</b></dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+                
+                <h4>Tableaux &agrave; deux dimensions</h4>
+                <p>&#9679; G&eacute;n&eacute;ralement on utilise des tableaux &agrave; une dimension, mais il existe &eacute;galement des tableaux &agrave; deux dimensions.</p>
+                
+                <dl>
+                    <dt>&#9679; <b>Exemple</b>:</dt><br />
+                    <dd>
+                        <fieldset>
+                            <legend><b>Tableau</b> mots[<i>3</i>][<i>7</i>] : <b>Caractere</b></legend>
+                            <div class="tabcells">
+                                <table>
+                                    <tr>
+                                        <td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </fieldset>            
+                    </dd><br />
+                    
+                    <dt>&#9679; <b>Exemple</b>:</dt><br />
+                    <dd>&#9679; L'&eacute;l&eacute;ment de la <b>i</b>&egrave;me ligne et la j&egrave;me colonne est repr&eacute;sent&eacute; par mots[<i>i</i>][<i>j</i>] </dd>
+                    <dd>
+                        <fieldset>
+                            <legend><b>Tableau</b> mots[<i>3</i>][<i>7</i>] : <b>Caractere</b></legend>
+                            <br /><span style="color: grey; margin-left: 40px;"><u>mots[<i>1</i>][<i>4</i>] &larr; 'r'</u></span>
+                            <div class="tabcells">
+                                <table>
+                                    <tr>
+                                        <td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td><td></td><td></td><td></td><td></td><td class="filled-cell">r</td><td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </fieldset>            
+                    </dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Enregistrement</h3>
+                
+                <dl>
+                    <dt><p>&#9679; <b>D&eacute;finition</b></p></dt>
+                    <dd><u>Autres noms</u>: <i>Variable compos&eacute;</i>, <i>Structure</i>.</dd>
+                    <dd><u>Enregistrement</u>: ensemble d'infos de type diff&eacute;rents.</dd>
+                    <dd>1 info &rArr; un champ (d&eacute;sign&eacute; par un <font style="color: red;">nom</font> et un <font style="color: red;">type</font>).</dd>
+                    
+                    <dt><p>&#9679; <b>D&eacute;claration</b></p></dt>
+                    <dd><b>Type</b></dd>
+                    <dd>&lt;Nom de Type&gt; = <b>Enregistrement</b></dd>
+                    <dd style="padding-left: 30px;">&lt;Nom de champ 1&gt; : &lt;Type de donn&eacute;es&gt;</dd>
+                    <dd style="padding-left: 30px;">&lt;Nom de champ 2&gt; : &lt;Type de donn&eacute;es&gt;</dd>
+                    <dd style="padding-left: 30px;">...</dd>
+                    <dd style="padding-left: 30px;">&lt;Nom de champ x&gt; : &lt;Type de donn&eacute;es&gt;</dd>
+                    <dd><b>Fin Enregistrement</b></dd>
+                </dl>
+                
+                <fieldset>
+                    <legend><b>Exemple</b></legend>
+                    
+                    <center><table>
+                        <tr>
+                            <td>
+                                <fieldset style="width: 300px; height: 150px;">
+                                    <legend>Un abonn&eacute; au t&eacute;l&eacute;phone</legend>
+                                    <ul style="list-style-type: none;">
+                                        <li>- code (entier)</li>
+                                        <li>- nom (20c)</li>
+                                        <li>- p&eacute; (20c)</li>
+                                        <li>- address (40c)</li>
+                                        <li>- t&eacute;l&eacute;phone (9c)</li>
+                                    </ul>
+                                </fieldset>
+                                </td>
+                            <td>
+                                <fieldset style="width: 300px; height: 150px;">
+                                    <legend>Enregistrement</legend>
+                                    <dd><b>Type</b></dd>
+                                    <dd>Abonne = <b>Enregistrement</b></dd>
+                                    <dd style="padding-left: 30px;">Code : <i>entier</i></dd>
+                                    <dd style="padding-left: 30px;">Nom : <i>chaine</i></dd>
+                                    <dd style="padding-left: 30px;">Prenom : <i>chaine</i></dd>
+                                    <dd style="padding-left: 30px;">Tel : <i>chaine</i></dd>
+                                    <dd><b>Fin Enregistrement</b></dd>
+                                </fieldset>
+                            </td>
+                        </tr>
+                    </table></center>
+                </fieldset>
+                
+                <div class="sheet" style="margin-top: 30px;">
+                    <label>Algorithme d'enregistrement</label>
+                    <span>
+                        <br />
+                        <b>Algorithme</b> Gestion d'abonnements<br />
+                        <b>Type</b><br />
+                        Abonne = <b>Enregistrement</b>
+                        <dd>Code : <i>entier</i></dd>
+                        <dd>Nom : <i>chaine</i></dd>
+                        <dd>Prenom : <i>chaine</i></dd>
+                        <dd>Tel : <i>chaine</i></dd>
+                        <b>Fin Enregistrement</b><br /><br />
+                        <b>Variables</b> A : <b>Abonne</b><br />
+                        <b>D&eacute;but</b><br />
+                        <dd><b>Ecrire</b>("Donner le code de l'abonn&eacute;")</dd>
+                        <dd><b>Lire</b>(A.Code)</dd>
+                        <dd><b>Ecrire</b>("Donner le nom de l'abonn&eacute;")</dd>
+                        <dd><b>Lire</b>(A.Nom)</dd>
+                        <dd><b>Ecrire</b>("Donner le prenom de l'abonn&eacute;")</dd>
+                        <dd><b>Lire</b>(A.Prenom)</dd>
+                        <dd><b>Ecrire</b>("Donner le t&eacute;l&eacute;phone de l'abonn&eacute;")</dd>
+                        <dd><b>Lire</b>(A.Tel)</dd>
+                        <br />
+                        <dd><b>Ecrire</b>("Les donn&eacute;s de L'abonn&eacute;")</dd>
+                        <dd><b>Ecrire</b>("Code: " A.Code)</dd>
+                        <dd><b>Ecrire</b>("Nom: " A.Nom)</dd>
+                        <dd><b>Ecrire</b>("Prenom: " A.Prenom)</dd>
+                        <dd><b>Ecrire</b>("Tel: " A.Tel)</dd>
+                        <b>Fin</b>
+                    </span>
+                </div>
+            </article>
+            
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

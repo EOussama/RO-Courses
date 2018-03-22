@@ -1,0 +1,71 @@
+/*----------------------------------------------------------------------Contact styling---------------------------------------------------------------- */
+
+#contactForm { height: 680px; }
+
+/*----------------------[Form]----------------------*/
+
+form
+{
+    margin-left: 510px;
+    margin-top: 100px;
+    padding: 30px;
+    width: 400px;
+    height: 470px;
+    border: 2px solid cadetblue;
+    border-top: 15px solid cadetblue;
+    box-shadow: 4px 4px 10px black;
+    background: linear-gradient(to bottom, azure, lightcyan);
+}
+
+label
+{
+    margin-left: 100px;
+    font-family: monospace, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    color: cadetblue;
+}
+
+input[type="text"], input[type="email"], textarea
+{
+    margin-top: 30px;
+    margin-left: 65px;
+    width: 250px;
+    padding: 8px;
+    font-family: monospace, sans-serif;
+    border: 2px solid cadetblue;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 8px black;
+}
+
+input[type="submit"]
+{
+    margin-top: 30px;
+    margin-left: 120px;
+    width: 150px;
+    padding: 10px;
+    border: 2px solid cadetblue;
+    font-family: monospace, sans-serif;
+    font-weight: bold;
+    color: cadetblue;
+    font-size: 16px;
+    transition: .7s;
+}
+
+input[type="submit"]:hover
+{
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 8px black;
+    font-size: 14px;
+}
+
+input[type="submit"]:active
+{
+    color: azure;
+    background-color: cadetblue;
+}
+
+textarea { width: 252px;}
+
+/*--------------------------------------------------*/

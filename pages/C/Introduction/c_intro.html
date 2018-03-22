@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/syntaxH.css" />
+        
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours de C</h1>
+                <h3>Introduction de la programmation structur&eacute;e en C</h3>
+                <hr />
+            </div>
+                
+             <article>
+                <h3>Programmation</h3>
+                <dl>
+                    <dt>&#9679; <b>Programmation structur&eacute;e (langage structur&eacute;)</b></dt>
+                    <dd>Pascal</dd>
+                    <dd>C</dd>
+                    <br />
+                    <dt>&#9679; <b>Programmation orient&eacute;e objet (langage orient&eacute; objet)</b></dt>
+                    <dd>Delphi bas&eacute; sur Pascal</dd>
+                    <dd>C++ Builder et Visual C++ bas&eacute;s sur C</dd>
+                    <dd>Java</dd>
+                    <dd>C#</dd>
+                    <br />
+                    <dt>&#9679; <b>Language C</b></dt>
+                    <dd>language de programmation de base</dd>
+                    <dd>tr&egrave;s proche de la machine</dd>
+                    <dd>tr&egrave;s puissant</dd>
+                    <br />
+                    <dt>&#9679; <b>Plusieurs version</b></dt>
+                    <dd>C (Unix/Linux)</dd>
+                    <dd>Turbo C ou Turbo C++ (Dos)</dd>
+                    <dd>Visual C++ (Windows)</dd>
+                    <dd>...</dd>
+                </dl> 
+            </article>
+            
+            <article>
+                <h3>Comment programmer en C</h3>
+                <dl>
+                    <dt>&#9679; <b>Choix de la plateforme et de la version C</b></dt>
+                    <dd>Choisir la plateforme Unix/Linux ou Windows</dd>
+                    <br />
+                    <dt>&#9679; <b>Les instructions du programme source sont enregistr&eacute;es dans un fichier texte.</b></dt>
+                    <dd>Extension:</dd>
+                    <dd style="margin-left: 60px;"><i>".c" si programme C</i></dd>
+                    <dd style="margin-left: 60px;"><i>".cpp" si programme C++</i></dd>
+                    <br />
+                    <dt>&#9679; <b>Language C</b></dt>
+                    <dd>language de programmation de base</dd>
+                    <dd>tr&egrave;s proche de la machine</dd>
+                    <dd>tr&egrave;s puissant</dd>
+                    <br />
+                    <dt>&#9679; Dans nos TPs, nous utiliserons Dev C++; compilateur + &eacute;diteur int&eacute;gr&eacute;.</dt>
+                    <dt>&#9679; Il y a d'autres IDE : Visual C++ 2008 Express, Eclipse CDT, NetBeans I.D.E...</dt>
+                </dl>
+                
+            
+                <div class="sheet">
+                    <label>Exemple de programme</label>
+                    <span>
+                        <br />
+                        <span class="clang-include">#include &lt;stdio.h&gt;</span><br /><br />
+                        <span class="clang-keyword">void</span> main()<br />
+                        {
+                        <dd><span class="clang-function">printf</span>(<span class="clang-string">"Hello World! \n"</span>);</dd>
+                        }
+                    </span>
+                </div>
+                
+                <p>&#9679; <b>&lt;stdio.h&gt;</b> pour "Standard Input/Output Header" ou "En-t&ecirc;te Standard d'Entr&eacute;e/Sortie", est l'en-t&ecirc;te de la biblioth&egrave;que standard du C d&eacute;clarant les macros, les constantes et les &eacute;finitions de fonctions tilis&eacute;es dans les op&eacute;rations d'entr&eacute;e/sortie.</p>
+            </article>
+            
+            <article>
+                <h3>Ecriture d'un programme</h3>
+                
+                <dl>
+                    <dt>&#9679; Un programme C est form&eacute; de:</dt>
+                    <dd><b>Directives de pr&eacute;-compilations (lignes commençant par #).</b></dd>
+                    <dd><b>Commentaires (limit&eacute;s par /* et */).</b></dd>
+                    <dd><b>D&eacute;clarations ou d&eacute;finitions globales de variables /fonctions (visibles par toutes les parties du programme).</b></dd>
+                    <dd><b>Une fonction principale main (qui lance l'ex&eacute;cution d'un programme).</b></dd>
+                    <dd><b>Un bloc principal li&eacute; &agrave; main et d&eacute;limit&eacute; par { et }.</b></dd><br />
+                    <dd><b>&agrave; l'int&eacute;rieur du bloc principal.</b></dd>
+                    <dd style="margin-left: 60px;">des d&eacute;clarations ou d&eacute;finitions de variables/fonctions (locales au programme principal).</dd>
+                    <dd style="margin-left: 60px;">des instructions ou des blocs d'instructions d&eacute;limit&eacute;s par { et }.</dd>
+                    <br />
+                    <dd><b>Rq.</b></dd>
+                    <dd style="margin-left: 60px;">Les instructions, les d&eacute;clarations ou d&eacute;finitions de variables/fonctions sont termin&eacute;es par un point virgule (";").</dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Structure g&eacute;n&eacute;rale d'un programme C</h3>
+                
+                <dl>
+                    <dd>#include &lt;Fichiers ou biblioth&egrave;ques externes&gt;</dd>
+                    <dd>#define &lt;Constantes ou macros fonctions&gt;</dd>
+                    <dd>const &lt;D&eacute;finition de constantes externes&gt;;</dd>
+                    <dd>typedef &lt;D&eacute;finition de types de donn&eacute;es externes&gt;;</dd>
+                    <dd>&lt;D&eacute;finition de variables externes&gt;;</dd>
+                    <dd>&lt;Prototypes de fonctions externes&gt;;</dd>
+                    <dd>&lt;D&eacute;finition de fonctions&gt;;</dd>
+                    <dd>void main()</dd>
+                    <dd>{</dd>
+                    <dd style="margin-left: 60px;">&lt;D&eacute;finition de variables&gt;;</dd>
+                    <dd style="margin-left: 60px;">&lt;Prototypes de fonctions &gt;;</dd>
+                    <dd style="margin-left: 60px;">&lt;Corps du Programme Principal&gt;;</dd>
+                    <dd>}</dd>
+                    <dd>&lt;D&eacute;finition de fonctions&gt;;</dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Ex&eacute;cution d'un programme C</h3>
+                <center><img src="clang_prog_exe.PNG" alt="Execution de programme" /></center>
+            </article>
+            
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>

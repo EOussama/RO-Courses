@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RO Cours</title>
+        
+        <link rel="stylesheet" type="text/css" href="../../../styles/mainStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/coursDescStyling.css" />
+        <link rel="stylesheet" type="text/css" href="../../../styles/syntaxH.css" />
+        
+        <link rel="icon" href="../../../images/favicon.png"/>
+    </head>
+    
+    <body>
+        <header id="header">
+            <h1>&lt; RO Courses /&gt;</h1>
+            <p>Apprendre &agrave; coder, c'est facile ... et <u><b>gratuit</b></u>!</p>
+        </header>
+        <section>
+            <div id="ct">
+                <h1>Cours de C</h1>
+                <h3>Chaines de caract&egrave;res</h3>
+                <hr />
+            </div>
+			
+			<article>
+				<h3>D&eacute;finition</h3>
+				<p>&#9679; Une cha&icirc;ne de caract&egrave;res est un tableau de char contenant un caract&egrave;re nul. Le caract&egrave;re nul a 0 pour code ASCII et s'&eacute;crit '\0'.</p>
+				<p>&#9679; Les valeurs significatives de la cha&icirc;ne de caract&egrave;res sont toutes celles plac&eacute;es avant le caract&egrave;re nul.</p>
+				<p>&#9679; On remarque donc que si le caract&egrave;re nul est en premi&egrave;re position, on a une chaine de caract&egrave;res vide.</p>
+				
+				<h4>D&eacute;claration</h4>
+				<p>&#9679; Comme une cha&icirc;ne de caract&egrave;res est un tableau de char, on le d&eacute;clare:</p>
+				<span style="margin-left: 200px;"><b>char &lt;nom_chaine&gt;[&lt;taille_chaine&gt;];</b></span>
+				<p>&#9679; Par exemple, on d&eacute;clare une chaine c de 200 caract&egrave;res de la sorte: <b>char c[200];</b></p>
+				<p>&#9679; Le nombre maximal de lettres qu'il sera possible de placer dans c ne sera certainement pas 200 mais 199, car il faut placer apr&egrave;s le dernier caract&egrave;re de la cha&icirc;ne un caract&egrave;re nul.</p>
+				
+				<h4>Initialisation</h4>
+				<p>&#9679; On initialise une cha&icirc;ne a la d&eacute;claration, et seulement a la d&eacute;claration de la sorte:</p>
+				<span style="margin-left: 130px;"><b>char &lt;nom_chaine&gt;[&lt;taille_chaine&gt;] = &lt;valeur_initialisation&gt;;</b></span>
+				<p>&#9679; Ou la valeur d'initialisation contient la juxtaposition de caract&egrave;res formant la cha&icirc;ne entour&eacute;e de guillemets ("").</p>
+				<dl>
+					<dt>&#9679; Exemple:</dt>
+					<dd>char c[] = "bonjour" &larr; &rarr;</dd>
+					<dd>char c[] = {'b','o','n','j','o','u','r','\0'}(taille  alcul&eacute;e par le compilateur)</dd>
+				</dl>
+				
+				<h4>Acc&egrave;s aux &eacute;l&eacute;ments</h4>
+				<p>&#9679; Du fait qu'une chaine de caract&egrave;re est un tableau, il est ais&eacute; d'en isoler un &eacute;l&eacute;ment. On teste donc si le premier caract&egrave;re de c est une majuscule de la sorte:</p>
+				<dl style="color: grey; font-style: italic;">
+					<dd>if(c[0] &gt;= 'A' &amp;&amp; c[0] &lt;= 'Z')</dd>
+					<dd>printf("Cette phrase commence par une majuscule \n");</dd>
+					<dd>else</dd>
+					<dd>printf ("Cette phrase ne commence pas par une majuscule \n");</dd>
+				</dl>
+				<p>&#9679; Cette propri&eacute;t&eacute; permet aussi d'afficher une cha&icirc;ne de caract&egrave;re par caract&egrave;re:</p>
+				<dl style="color: grey; font-style: italic;">
+					<dd>int i = 0;</dd>
+					<dd>while (c[i] != 0)</dd>
+					<dd>printf ("%c" , c [i++]);</dd>
+				</dl>
+				
+				<div class="sheet">
+                    <label>Affichage d'&eacute;lements</label>
+                    <span>
+                        <br />
+                        <span class="clang-include">#include &lt;stdio.h&gt;</span><br /><br />
+                        <span class="clang-keyword">void</span> main()<br />
+                        {
+							<dd><span class='clang-keyword'>char</span> D[27];</dd>
+							<dd><span class='clang-keyword'>int</span> i;</dd>
+							<br>
+							<dd><span class='clang-keyword'>for</span>(i = 0; i&lt;26; i++)</dd>
+							<dd style="margin-left: 70px;">D[i] = 'a' + i;</dd>
+							<dd>D[26] = 0;</dd>
+							<br>
+							<dd><span class="clang-function">printf</span>(<span class="clang-string">"*******Affichage avec while*******\n"</span>);</dd>
+							<dd>i = 0;</dd>
+							<dd><span class='clang-keyword'>while</span>(D[i] != 0)</dd>
+							<dd style="margin-left: 70px;"><span class="clang-function">printf</span>(<span class="clang-string">"\n%c"</span>, D[i++]);</dd>
+							<br>
+							<dd><span class="clang-function">printf</span>(<span class="clang-string">"*******Affichage avec putchar*******\n"</span>);</dd>
+							<dd>i = 0;</dd>
+							<dd><span class='clang-keyword'>while</span>(D[i] != 0)</dd>
+							<dd style="margin-left: 70px;"><span class="clang-function">putchar</span>(D[i++]);</dd>
+							<br>
+							<dd><span class="clang-function">printf</span>(<span class="clang-string">"*******Affichage avec %%s*******\n"</span>);</dd>
+							<dd ><span class="clang-function">printf</span>(<span class="clang-string">"Vous avez saisi: \n %s \n"</span>, D);</dd>
+                        }
+                    </span>
+                </div>
+				
+				<h4>Affichage avec "puts"</h4>
+				
+				<p>&#9679; <b>puts</b> &eacute;crit la cha&icirc;ne de caract&egrave;res d&eacute;sign&eacute;e par &lt;Cha&icirc;ne&gt; sur stdout et provoque un retour &agrave; la ligne.</p>
+				
+				<p>&#9679; En pratique, <i>puts(TXT);</i> est &eacute;quivalent &agrave; <i>printf("%s\n", TXT);</i></p>
+				
+				<h4>Saisie avec "gets"</h4>
+				<p>&#9679; Tout d&eacute;bordement d'indice et/ou absence de caract&egrave;re nul peut donner lieu a des bugs difficiles a trouver</p>
+				
+				<div class="sheet">
+                    <label>Finction "gets"</label>
+                    <span>
+                        <br />
+                        <span class="clang-include">#include &lt;stdio.h&gt;</span><br /><br />
+						<span class="clang-include">#define N 20</span>
+						<br /><br />
+                        <span class="clang-keyword">void</span> main()<br />
+                        {
+							<dd><span class='clang-keyword'>char</span> chaine[N];</dd>
+							<dd><span class='clang-keyword'>int</span> i;</dd>
+							<br>
+							<dd><span class="clang-function">printf</span>(<span class="clang-string">"Saisissez une phrase : \ n"</span>);</dd>
+							<dd><span class="clang-function">gets</span>(chaine);</dd>
+							<dd><span class='clang-keyword'>for</span>(i = 0; chaine[i] != 0; i++)</dd>
+							<dd style="margin-left: 70px;"><span class="clang-function">printf</span>(<span class="clang-string">"chaine[%d] = %c (code ASCII : %d )\n"</span>, i ,chaine[i], chaine[i]);</dd>
+                        }
+                    </span>
+                </div>
+				
+				<h4>"fgets" au lieu de "gets"</h4>
+				<font style="font-weight: bold; color: cadetblue; text-align: center;">fgets(&lt;chaine&gt;, &lt;taille&gt;, stdin);</font>
+				<p>&#9679; La taille de la cha&icirc;ne saisie est limit&eacute;e par &lt;taille&gt;, caract&egrave;e nul compris. Le r&eacute;sultat est plac&eacute; dans &lt;chaine&gt;.</p>
+				
+				<p>&#9679; Tous les caract&egrave;res suppl&eacute;mentaires saisis par l'utilisateur ne sont pas plac&eacute;s dans &lt;chaine&gt;,seuls les (&lt;taille&gt;-1) premiers caract&egrave;res sont r&eacute;cup&eacute;r&eacute;s par fgets. Nous saisirons donc la phrase de notre programme de la sorte : <b>fgets(c , 200 , stdin);</b></p>
+				
+				<h4>Saisie avec scanf</h4>
+				
+				<p>&#9679; scanf avec le sp&eacute;cificateur %s permet de lire un mot isol&eacute; &agrave; l'int&eacute;rieur d'une suite de donn&eacute;es du m&ecirc;me ou d'un autre type.</p>
+				
+				<p>&#9679;  scanf avec le sp&eacute;cificateur %s lit un mot du fichier d'entr&eacute;e standard stdin et le m&eacute;morise &agrave; l'adresse qui est associ&eacute;e &agrave; %s.</p>
+				
+				<dl>
+					<dt>&#9679; La fonction scanf a besoin des adresses de ses arguments:</dt>
+					<dd>* Les noms des variables num&eacute;riques (int, char, long, float, ...) doivent &ecirc;tre marqu&eacute;s par le symbole '&amp;'.</dd>
+					<dd>* Comme le nom d'une cha&icirc;ne de caract&egrave;res est le repr&eacute;sentant de l'adresse du premier caract&egrave;re de la cha&icirc;ne, il ne doit pas &ecirc;tre pr&eacute;c&eacute;d&eacute; de l'op&eacute;rateur adresse '&amp;'.</dd>
+					<dd>* L'utilisation de scanf pour la lecture de cha&icirc;nes de caract&egrave;res est seulement conseill&eacute;e si on est forc&eacute; de lire un nombre fix&eacute; de mots en une fois.</dd>
+				</dl>
+			</article>
+			
+			<article>
+				<h3>Pr&eacute;c&eacute;dence alphab&eacute;tique et lexicographique</h3>
+				
+				<p>&#9679;  Pour le code ASCII, nous pouvons constater l'ordre suivant:  <i>... , 0, 1 , 2, ..., 9, ..., A, B, C, ..., Z, ..., a, b, c, ..., z, ...</i></p>
+				<p>&#9679;  Les symboles sp&eacute;ciaux (' ,+ ,- ,/ ,{ ,] , ...) et les lettres accentu&eacute;es (&eacute; ,&egrave; ,&agrave; ,&ucirc; , ...) se trouvent r&eacute;partis autour des trois grands groupes de caract&egrave;res (chiffres, majuscules, minuscules).</p>
+				<p>&#9679;  Leur pr&eacute;c&eacute;dence ne correspond &agrave; aucune r&egrave;gle d'ordre sp&eacute;cifique. </p>
+				<p>&#9679; '0' est inf&eacute;rieur &agrave; 'Z' et noter '0' &lt; 'Z' </p>
+				
+				<fieldset>
+					<legend><b>Exemple</b>:</legend>
+					
+					<dl>
+						<dt>&#9679; if (C&gt;='0' &amp;&amp; C&lt;='9') printf("Chiffre\n");</dt>
+						<dt>&#9679; if (C&gt;='A' &amp;&amp; C&lt;='Z') printf("Majuscule\n");</dt>
+						<dt>&#9679; if (C&gt;='a' &amp;&amp; C&lt;='z') printf("Minuscule\n");</dt>
+					</dl>
+				</fieldset>
+				
+				<dl>
+					<dt>&#9679; Il est facile, de convertir des lettres majuscules dans des minuscules:</dt>
+					<dd> if (C&gt;='A' &amp;&amp; C&lt;='Z') C = C-'A'+'a';</dd>
+					<dd><i>ou</i></dd>
+					<dd> if (C&gt;='a' &amp;&amp; C&lt;='z') C = C-'a'+'A';</dd>
+				</dl>
+			</article>
+			
+			<article>
+				<h3>La biblioth&egrave;que "string.h"</h3>
+				
+				<dl>
+					<dt>&#9679; Cette biblioth&egrave;que propose des fonctions de maniement de cha&icirc;nes de caract&egrave;res, &agrave; savoir:</dt>
+					<dd><b>strlen(&lt;s&gt;)</b>: fournit la longueur de la cha&icirc;ne sans compter le '\0' Final</dd>
+					<dd><b>strcpy(&lt;s&gt;, &lt;t&gt;)</b>: copie &lt;t&gt; vers &lt;s&gt;</dd>
+					<dd><b>strcat(&lt;s&gt;, &lt;t&gt;)</b>: ajoute &lt;t&gt; &agrave; la fin de &lt;s&gt;</dd>
+					<dd><b>strcmp(&lt;s&gt;, &lt;t&gt;)</b>: compare &lt;s&gt; et &lt;t&gt; lexico-graphiquement et retourne: <i>-1: si &lt;s&gt; pr&eacute;c&egrave;de &lt;t&gt; | 0: si &lt;s&gt; est &eacute;gal &agrave; &lt;t&gt; | 1: si &lt;s&gt; suit &lt;t&gt;</i></dd>
+					<dd><b>strncpy(&lt;s&gt;, &lt;t&gt;, &lt;n&gt;)</b>: copie au plus &lt;n&gt; caract&egrave;res de &lt;s&gt; vers &lt;t&gt;</dd>
+					<dd><b>strncat(&lt;s&gt;, &lt;t&gt;, &lt;n&gt;)</b>: ajoute au plus &lt;n&gt; caract&egrave;res de &lt;s&gt; &agrave; la fin de &lt;s&gt;</dd>
+					<dd><b>strncmp(&lt;s&gt;, &lt;t&gt;, &lt;n&gt;)</b>: comme strcmp mais limite la comparaison en n caract&egrave;res</dd>
+					<dd><b>strcmpi(&lt;s&gt;, &lt;t&gt;)</b>: comme strcmp mais ne distingue pas les majuscules et les minuscules</dd>
+				</dl>
+				
+				<h4>Les fonctions de recherches</h4>
+				
+				<dl>
+					<dt>&#9679; strchr(chaine,caract&egrave;re)</dt>
+					<dd>Retourne NULL si le caract&egrave;re ne se trouve pas dans la chaine sinon un pointeur vers le premier caract&egrave;re rouv&eacute;.</dd>
+					<dt>&#9679; strrchr(chaine, caract&egrave;re)</dt>
+					<dd>Retourne NULL si le caract&egrave;re ne se trouve pas dans la chaine sinon un pointeur vers le dernier caract&egrave;re trouv&eacute;.</dd>
+					<dt>&#9679; strpbrk (chaine1,char* lettresARechercher)</dt>
+					<dd>Retourne NULL si aucun caract&egrave;re n'est trouv&eacute; ou un pointeur sur le premier caract&egrave;re trouv&eacute;.</dd>
+					<dt>&#9679; strrchr(chaine, caract&egrave;re)</dt>
+					<dd>Retourne NULL si aucun caract&egrave;re n'est trouv&eacute; ou un pointeur sur la premi&egrave;re chaine trouv&eacute;e.</dd>
+				</dl>
+				
+				<div class="note">
+                    <h3>Remarque:</h3>
+                    <p>La biblioth&egrave;que &lt;stdlib&gt; contient des d&eacute;clarations de fonctions pour la conversion de nombres en cha&icirc;nes de caract&egrave;res et vice-versa.</p>
+                </div>
+				
+				<dl>
+					<dt>&#9679; <b>Conversion de cha&icirc;nes de caract&egrave;res en nombres</b>:</dt>
+					<dd>atoi(&lt;s&gt;): retourne la valeur num&eacute;rique repr&eacute;sent&eacute;e par &lt;s&gt; comme int</dd>
+					<dd>atol(&lt;s&gt;): retourne la valeur num&eacute;rique repr&eacute;sent&eacute;e par &lt;s&gt; comme long</dd>
+					<dd>atof(&lt;s&gt;): retourne la valeur num&eacute;rique repr&eacute;sent&eacute;e par &lt;s&gt; comme double</dd>
+					<br>
+					<dt>&#9679; <b>Conversion de nombres en cha&icirc;nes de caract&egrave;res:</b>:</dt>
+					<dd>itoa (&lt;n_int&gt;, &lt;s&gt;, &lt;b&gt;)</dd>
+					<dd>ltoa (&lt;n_long&gt;, &lt;s&gt;, &lt;b&gt;</dd>
+					<dd>ultoa (&lt;n_uns_long&gt;, &lt;s&gt;, &lt;b&gt;)</dd>
+				</dl>
+
+			</article>
+			
+			<article>
+				<h3>La biblioth&egrave;que "ctype.h"</h3>
+				
+				<dl>
+					<dt>&#9679; <b>islower(char c)</b></dt>
+					<dd>retourne une valeur diff&eacute;rente de 0 si c est minuscule.</dd>
+					<dt>&#9679; <b>isupper(char c)</b></dt>
+					<dd> retourne une valeur diff&eacute;rente de 0 si c est majuscule.</dd>
+					<dt>&#9679; <b>isdigit(char c)</b></dt>
+					<dd>retourne une valeur diff&eacute;rente de 0 si c est un chiffre d&eacute;cimal ('0'..'9').</dd>
+					<dt>&#9679; <b>isalpha(char c)</b></dt>
+					<dd> retourne une valeur diff&eacute;rente de 0 si c est une lettre ('a'..'z', 'A'..'Z').</dd>
+					<dt>&#9679; <b>isspace(char c)</b></dt>
+					<dd> retourne une valeur diff&eacute;rente de 0 si c est un signe d'espacement.</dd>
+					<dt>&#9679; <b>tolower(char c)</b></dt>
+					<dd> Convertit le caract&egrave;re c en minuscule.</dd>
+					<dt>&#9679; <b>toupper(char c)</b></dt>
+					<dd> Convertit le caract&egrave;re c en majuscule.</dd>
+				</dl>
+			</article>
+			
+			<article>
+				<h3>Tableaux de CDC</h3>
+				
+				<p>&#9679; Un tableau de cha&icirc;nes de caract&egrave;res correspond &agrave; un tableau &agrave; deux dimensions du type char, o&ugrave; chaque ligne contient une cha&icirc;ne de caract&egrave;res.</p>
+				<p>&#9679; <b>Exemple</b>: <i>char JOUR[7][9];</i></p>
+				<p>&#9679; R&eacute;serve l'espace en m&eacute;moire pour 7 mots contenant 9 caract&egrave;res (dont 8 caract&egrave;res significatifs).</p>
+				<center><img src="tabDemo.PNG" alt="Tab Demo"></center>
+				
+				<p>&#9679; Lors de la d&eacute;claration il est possible d'initialiser toutes les composantes du tableau par des cha&icirc;nes de caract&egrave;res constantes: <i>char JOUR[7][9]= {"lundi", "mardi", "mercredi",  "jeudi", "vendredi", "samedi", "dimanche"};</i></p>
+				<center><img src="2nd_tab_demo.PNG" alt="2nd emoa table"></center>
+				
+			</article>
+        </section>
+        <footer>
+            <summary>
+                <h2>&lt; RO Courses /&gt;</h2>
+                <p id="creators">Cr&eacute;&eacute; par Redouan Andaloussi et Oussama Essamadi</p>
+                <center>
+                    <table>
+                    <tr>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Redouan Andaloussi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/andaloussir" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/110136347706439063851" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/andaloussir" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        <td>
+                        <td>
+                            <div class="Creatorinfo">
+                                <p>Oussama Essamadi</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/oussama.essamadi" target="_blank"><img src="../../../images/facebook-plain.svg" width="20px"/>  Facbook</a></li>
+                                    <li><a href="https://plus.google.com/u/0/+eoussama" target="_blank"><img src="../../../images/google-original.svg" width="20px"/>  Gmail</a></li>
+                                    <li><a href="https://www.linkedin.com/in/oussama-essamadi-a59326155/" target="_blank"><img src="../../../images/linkedin-original.svg" width="20px"/>  Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
+                </center>
+                <p id="goUp"><a href="#header" ><img src="../../../images/arrowUp.png" alt="Retoure en haute" width="50px;"/></a></p>
+                <p id="creationDate">Projet a commenc&eacute; le 1/14/2018 - RO 2018 &copy;</p>
+            </summary>
+        </footer>
+    </body>
+</html>
